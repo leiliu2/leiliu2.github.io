@@ -851,20 +851,73 @@
       `;
     }
 
-    function drawOne() {
-      const card = TAROT_CARDS[Math.floor(Math.random() * TAROT_CARDS.length)];
-      renderSingleCard(card);
-      appendToHistory([card]);
-    }
+// -------------------------
+// 🔮 基于时间种子的随机生成器
+// -------------------------
+function seededRandomGenerator(seed) {
+  let value = seed % 2147483647;
+  if (value <= 0) value += 2147483646;
+  return function () {
+    value = (value * 16807) % 2147483647;
+    return (value - 1) / 2147483646;
+  };
+}
 
-    function drawThree() {
-      const shuffled = [...TAROT_CARDS].sort(() => Math.random() - 0.5);
-      const cards = shuffled.slice(0, 3);
-      // 显示在左侧主区域第一张（当前焦点）
-      renderSingleCard(cards[1] || cards[0]);
-      renderSpread(cards);
-      appendToHistory(cards);
-    }
+// 🧭 使用时间戳作为种子
+function getTimeSeed() {
+  return Date.now() & 0xffffffff; // 保留 32 位
+}
+
+// 🎴 使用种子打乱数组（Fisher–Yates 洗牌）
+function shuffleWithSeed(array, seed) {
+  const rand = seededRandomGenerator(seed);
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// -------------------------
+// 🃏 抽牌逻辑（单张 / 三张）
+// -------------------------
+function drawOne() {
+  const seed = getTimeSeed();
+  console.log("🎲 本次塔罗种子:", seed);
+  const rand = seededRandomGenerator(seed);
+  const index = Math.floor(rand() * TAROT_CARDS.length);
+  const card = TAROT_CARDS[index];
+  renderSingleCard(card);
+  appendToHistory([{ ...card, seed }]);
+}
+
+function drawThree() {
+  const seed = getTimeSeed();
+  console.log("🎲 本次塔罗种子:", seed);
+  const shuffled = shuffleWithSeed(TAROT_CARDS, seed);
+  const cards = shuffled.slice(0, 3);
+  renderSingleCard(cards[1] || cards[0]);
+  renderSpread(cards);
+  appendToHistory(cards.map(c => ({ ...c, seed })));
+}
+
+    // 伪随机
+    
+    // function drawOne() {
+    //   const card = TAROT_CARDS[Math.floor(Math.random() * TAROT_CARDS.length)];
+    //   renderSingleCard(card);
+    //   appendToHistory([card]);
+    // }
+
+    // function drawThree() {
+    //   const shuffled = [...TAROT_CARDS].sort(() => Math.random() - 0.5);
+    //   const cards = shuffled.slice(0, 3);
+    //   // 显示在左侧主区域第一张（当前焦点）
+    //   renderSingleCard(cards[1] || cards[0]);
+    //   renderSpread(cards);
+    //   appendToHistory(cards);
+    // }
 
     function clearHistory() {
       if (!confirm("确定要清空本地抽牌记录吗？此操作只影响浏览器本地数据。")) return;
