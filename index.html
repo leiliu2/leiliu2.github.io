@@ -370,6 +370,26 @@
     .spread-card {
       flex: 0 0 90px;
       text-align: center;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      padding: 6px;
+      background: transparent;
+      color: inherit;
+      transition: border-color 0.18s ease-out, background 0.18s ease-out, transform 0.18s ease-out;
+    }
+
+    .spread-card:hover,
+    .spread-card:focus-visible {
+      border-color: rgba(234, 179, 8, 0.55);
+      background: rgba(234, 179, 8, 0.08);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .spread-card.is-active {
+      border-color: rgba(234, 179, 8, 0.95);
+      background: rgba(234, 179, 8, 0.14);
+      box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.22), 0 12px 26px rgba(0, 0, 0, 0.45);
     }
 
     .spread-card img {
@@ -973,6 +993,8 @@
     const historyContainer = document.getElementById("history-container");
 
     const HISTORY_KEY = "tarot-major-arcana-history";
+    let currentSpreadCards = [];
+    let activeSpreadCardId = null;
 
     function formatDateTime(d = new Date()) {
       return d.toLocaleString("zh-CN", {
@@ -1119,34 +1141,57 @@
       renderWaiteReading(card);
     }
 
-    function renderSpread(cards) {
+    function setSpreadActive(cardId) {
+      activeSpreadCardId = cardId;
+      spreadContainer
+        .querySelectorAll(".spread-card")
+        .forEach((el) => {
+          const isActive = Number(el.dataset.cardId) === Number(cardId);
+          el.classList.toggle("is-active", isActive);
+          el.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+    }
+
+    function focusSpreadCard(cardId) {
+      const card = currentSpreadCards.find((item) => Number(item.id) === Number(cardId));
+      if (!card) return;
+      renderSingleCard(card);
+      setSpreadActive(card.id);
+    }
+
+    function renderSpread(cards, selectedCardId = null) {
       if (!cards || cards.length === 0) {
+        currentSpreadCards = [];
+        activeSpreadCardId = null;
         spreadContainer.innerHTML =
           '<div class="history-empty">点击「抽三张」查看三张牌的组合。</div>';
         return;
       }
 
+      currentSpreadCards = cards;
       const labels = ["过去", "现在", "未来"];
+      const activeId = selectedCardId ?? cards[1]?.id ?? cards[0].id;
 
       const items = cards
         .map(
           (card, idx) => `
-        <div class="spread-card">
+        <button class="spread-card${Number(card.id) === Number(activeId) ? " is-active" : ""}" type="button" data-card-id="${card.id}" aria-pressed="${Number(card.id) === Number(activeId) ? "true" : "false"}" title="查看${card.cn}的详细说明">
           <img src="${imageBasePath + card.file}" alt="${card.en}" loading="lazy" />
           <div class="spread-card-title">
             <div>${labels[idx] ?? ""}</div>
             <div>${card.cn}</div>
           </div>
-        </div>
+        </button>
       `
         )
         .join("");
 
       spreadContainer.innerHTML = `
-        <div class="spread">
+        <div class="spread" aria-label="三张抽牌阵，点击任一牌查看详情">
           ${items}
         </div>
       `;
+      setSpreadActive(activeId);
     }
 
 // -------------------------
@@ -1195,8 +1240,9 @@ function drawThree() {
   console.log("🎲 本次塔罗种子:", seed);
   const shuffled = shuffleWithSeed(TAROT_CARDS, seed);
   const cards = shuffled.slice(0, 3);
-  renderSingleCard(cards[1] || cards[0]);
-  renderSpread(cards);
+  const focusCard = cards[1] || cards[0];
+  renderSingleCard(focusCard);
+  renderSpread(cards, focusCard.id);
   appendToHistory(cards.map(c => ({ ...c, seed })));
 }
 
@@ -1226,6 +1272,11 @@ function drawThree() {
     oneBtn.addEventListener("click", drawOne);
     threeBtn.addEventListener("click", drawThree);
     clearBtn.addEventListener("click", clearHistory);
+    spreadContainer.addEventListener("click", (event) => {
+      const cardButton = event.target.closest(".spread-card");
+      if (!cardButton) return;
+      focusSpreadCard(cardButton.dataset.cardId);
+    });
 
     // 初始化历史
     renderHistory(loadHistory());
