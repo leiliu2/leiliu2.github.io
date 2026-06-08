@@ -509,6 +509,45 @@
       }
     }
 
+
+    .waite-reading {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: min(72vh, 780px);
+      overflow: auto;
+      padding-right: 6px;
+    }
+
+    .waite-pair {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(148, 163, 184, 0.24);
+    }
+
+    .waite-pair .en {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      line-height: 1.72;
+      color: #f8fafc;
+      margin-bottom: 8px;
+    }
+
+    .waite-pair .zh {
+      font-size: 14px;
+      line-height: 1.82;
+      color: #dbeafe;
+      border-top: 1px dashed rgba(148, 163, 184, 0.28);
+      padding-top: 8px;
+    }
+
+    .detail-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
   </style>
 </head>
 <body>
@@ -569,7 +608,7 @@
     <!-- 中间：Waite 原文与中文翻译 -->
     <section class="reading-panel empty" id="reading-panel">
       <div>
-        抽牌后会在这里显示 A. E. Waite 原文英文说明与中文翻译。<br />
+        抽牌后会在这里显示 A. E. Waite 原文与逐句中文翻译。<br />
         为适应长文本，此区域可独立滚动。
       </div>
     </section>
@@ -598,7 +637,7 @@
     </aside>
 
     <footer class="footer">
-      <div>说明文字基于 A. E. Waite《The Pictorial Key to the Tarot》epub。</div>
+      <div>说明文字基于 A. E. Waite《The Pictorial Key to the Tarot》epub；中栏保留大阿尔卡纳原文并逐句翻译。</div>
       <div>提示：本页面仅供个人娱乐与自我反思，不具备任何预测保证。</div>
     </footer>
   </div>
@@ -614,10 +653,8 @@
             "en": "The Fool",
             "cn": "愚者",
             "file": "RWS_Tarot_00_Fool.jpg",
-            "waiteDescEn": "With light step, as if earth and its trammels had little power to restrain him, a young man in gorgeous vestments pauses at the brink of a precipice among the great heights of the world; he surveys the blue distance before him-its expanse of sky rather than the prospect below. His act of eager walking is still indicated, though he is stationary at the given moment; his dog is still bounding. The edge which opens on the depth has no terror; it is as if angels were waiting to uphold him, if it came about that he leaped from the height. His countenance is full of intelligence and expectant dream. He has a rose in one hand and in the other a costly wand, from which depends over his right shoulder a wallet curiously embroidered. He is a prince of the other world on his travels through this one-all amidst the morning glory, in the keen air. The sun, which shines behind him, knows whence he came, whither he is going, and how he will return by another path after many days. He is the spirit in search of experience. Many symbols of the Instituted Mysteries are summarized in this card, which reverses, under high warrants, all the confusions that have preceded it.",
-            "waiteDescCn": "他步履轻盈，仿佛尘世束缚难以限制他；身着华服的年轻人停在世界高处的悬崖边，望向蓝色远方。他的狗仍在跳跃，深渊边缘并不令他恐惧；他像来自另一世界的王子，在此世旅行，是寻找经验的精神。",
-            "waiteMeaningEn": "Folly, mania, extravagance, intoxication, delirium, frenzy, bewrayment. Reversed : Negligence, absence, distribution, carelessness, apathy, nullity, vanity.",
-            "waiteMeaningCn": "愚行、狂热、奢纵、醉态、谵妄、狂乱、泄露。逆位：疏忽、缺席、分散、粗心、冷漠、空无、虚荣。"
+            "waiteDescEn": "With light step, as if earth and its trammels had little power to restrain him, a young man in gorgeous vestments pauses at the brink of a precipice among the great heights of the world; he surveys the blue distance before him-its expanse of sky rather than the prospect below. His act of eager walking is still indicated, though he is stationary at the given moment; his dog is still bounding. The edge which opens on the depth has no terror; it is as if angels were waiting to uphold him, if it came about that he leaped from the height. His countenance is full of intelligence and expectant dream. He has a rose in one hand and in the other a costly wand, from which depends over his right shoulder a wallet curiously embroidered. He is a prince of the other world on his travels through this one-all amidst the morning glory, in the keen air. The sun, which shines behind him, knows whence he came, whither he is going, and how he will return by another path after many days. He is the spirit in search of experience. Many symbols of the Instituted Mysteries are summarized in this card, which reverses, under high warrants, all the confusions that have preceded it. In his Manual of Cartomancy, Grand Orient has a curious suggestion of the office of Mystic Fool, as apart of his process in higher divination; but it might call for more than ordinary gifts to put it into operation. We shall see how the card fares according to the common arts of fortune-telling, and it will be an example, to those who can discern, of the fact, otherwise so evident, that the Trumps Major had no place originally in the arts of psychic gambling, when cards are used as the counters and pretexts. Of the circumstances under which this art arose we know, however, very little. The conventional explanations say that the Fool signifies the flesh, the sensitive life, and by a peculiar satire its subsidiary name was at one time the alchemist, as depicting folly at the most insensate stage.",
+            "waiteDescCn": "他步履轻盈，仿佛大地及其束缚几乎没有力量阻止他；一名身着华服的年轻人停在世界高处的悬崖边，凝望面前的蓝色远方，注视的是广阔天空而不是下方景物。虽然此刻他静止不动，他急切行走的动作仍被显示出来；他的狗仍在跳跃。通向深渊的边缘并不令他恐惧；仿佛若他从高处跃下，天使正在等待托住他。他的面容充满智慧与期待的梦。他一手拿着玫瑰，另一手拿着昂贵的手杖；手杖上从右肩垂下一只精巧刺绣的钱袋。他是另一个世界的王子，在此世界中旅行，置身清晨的荣耀与清冽空气之间。照在他身后的太阳知道他从何而来、将往何处去，以及许多日之后他如何经由另一条道路返回。他是寻找经验的精神。受传授奥秘的许多象征都汇总在此牌中；在高等权威之下，它推翻了此前围绕它的一切混乱。在我 1888 年的《塔罗牌》中，我已说明，神秘学解释者对这张牌所采用的排列完全错误，并且对于其本义，通常也有错置。它一直被视为零号牌，并由此被当作没有数字；但考虑到塔罗中通常的大阿尔卡纳排列，任何牌号都比这个无数字的位置更适合它。Éliphas Lévi 知道情况本应不同，但他把零号安排在第二十与第二十一牌之间，也就是说他把它看作最高意义上的被拯救者，也就是从卡帕纳中出来者。从表面上看，人们可能把它说成愚蠢的状态，但在另一个更深层面上，它就是奥秘状态。它曾一度被附名为炼金术士，因为它把愚蠢描绘到最无意义的阶段。"
       },
       {
             "id": 1,
@@ -626,10 +663,8 @@
             "en": "The Magician",
             "cn": "魔术师",
             "file": "RWS_Tarot_01_Magician.jpg",
-            "waiteDescEn": "A youthful figure in the robe of a magician, having the countenance of divine Apollo, with smile of confidence and shining eyes. Above his head is the mysterious sign of the Holy Spirit, the sign of life, like an endless cord, forming the figure 8 in a horizontal position {infinity symbol}. About his waist is a serpent-cincture, the serpent appearing to devour its own tail. This is familiar to most as a conventional symbol of eternity, but here it indicates more especially the eternity of attainment in the spirit. In the Magician's right hand is a wand raised towards heaven, while the left hand is pointing to the earth. This dual sign is known in very high grades of the Instituted Mysteries; it shews the descent of grace, virtue and light, drawn from things above and derived to things below. The suggestion throughout is therefore the possession and communication of the Powers and Gifts of the Spirit. On the table in front of the Magician are the symbols of the four Tarot suits, signifying the elements of natural life, which lie like counters before the adept, and he adapts them as he wills. Beneath are roses and lilies, the flos campi and lilium convallium , changed into garden flowers, to shew the culture of aspiration. This card signifies the divine motive in man, reflecting God, the will in the liberation of its union with that which is above. It is also the unity of individual being on all planes, and in a very high sense it is thought, in the fixation thereof. With further reference to what I have called the sign of life and its connexion with the number 8, it may be remembered that Christian Gnosticism speaks of rebirth in Christ as a change \"unto the Ogdoad.\" The mystic number is termed Jerusalem above, the Land flowing with Milk and Honey, the Holy Spirit and the Land of the Lord. According to Martinism, 8 is the number of Christ.",
-            "waiteDescCn": "年轻的魔术师面带阿波罗般的神情、自信微笑和明亮双眼；头上有生命与圣灵的无限符号，腰间蛇形腰带象征永恒。他右手举杖指天，左手指地，桌上四花色象征自然生命的元素，任由行家运用。",
-            "waiteMeaningEn": "Skill, diplomacy, address, subtlety; sickness, pain, loss, disaster, snares of enemies; self-confidence, will; the Querent, if male. Reversed : Physician, Magus, mental disease, disgrace, disquiet.",
-            "waiteMeaningCn": "技能、外交手腕、机敏与精微；也可指疾病、痛苦、损失、灾祸、敌人的圈套；自信、意志；若问卜者为男性，也可代表问卜者本人。逆位：医师、贤者、精神疾患、耻辱、不安。"
+            "waiteDescEn": "A youthful figure in the robe of a magician, having the countenance of divine Apollo, with smile of confidence and shining eyes. Above his head is the mysterious sign of the Holy Spirit, the sign of life, like an endless cord, forming the figure 8 in a horizontal position {infinity symbol}. About his waist is a serpent-cincture, the serpent appearing to devour its own tail. This is familiar to most as a conventional symbol of eternity, but here it indicates more especially the eternity of attainment in the spirit. In the Magician's right hand is a wand raised towards heaven, while the left hand is pointing to the earth. This dual sign is known in very high grades of the Instituted Mysteries; it shews the descent of grace, virtue and light, drawn from things above and derived to things below. The suggestion throughout is therefore the possession and communication of the Powers and Gifts of the Spirit. On the table in front of the Magician are the symbols of the four Tarot suits, signifying the elements of natural life, which lie like counters before the adept, and he adapts them as he wills. Beneath are roses and lilies, the flos campi and lilium convallium, changed into garden flowers, to shew the culture of aspiration. This card signifies the divine motive in man, reflecting God, the will in the liberation of its union with that which is above. It is also the unity of individual being on all planes, and in a very high sense it is thought, in the fixation thereof. With further reference to what I have called the sign of life and its connexion with the number 8, it may be remembered that Christian Gnosticism speaks of rebirth in Christ as a change \"unto the Ogdoad.\" The mystic number is termed Jerusalem above, the Land flowing with Milk and Honey, the Holy Spirit and the Land of the Lord. According to Martinism, 8 is the number of Christ.",
+            "waiteDescCn": "一位年轻人身着魔术师长袍，面容如神圣的阿波罗，带着自信的微笑和明亮的眼睛。他头上方是圣灵的神秘标记，也是生命的标记，像一条无尽的绳索，形成横置的数字八，即无限符号。他腰间束着蛇形腰带，蛇仿佛正在吞食自己的尾巴。多数人熟悉这是一种约定俗成的永恒象征，但在这里它更特别地指向精神成就的永恒。魔术师右手举杖指向天空，左手指向大地。这一双重手势在受传授的奥秘中属于很高的等级；它显示恩典、德性与光从上方被引下，并传递到下方。因此，整张牌的暗示是拥有并传达精神的力量与恩赐。魔术师面前的桌上有塔罗四种花色的象征，表示自然生命的元素；它们像筹码一样摆在行家面前，由他按自己的意志运用。下方是玫瑰与百合，即“田野之花”和“谷中百合”，被转化为园中之花，以显示志向的培育。此牌象征人内在的神圣动机，反映上帝；也象征意志在与上方相结合时获得解放。它也是个体存在在一切层面上的统一；在非常高的意义上，它是思想，并且是思想的固定成形。进一步说到我称为生命标记及其与数字八的联系，可以记得基督教诺斯替主义把在基督中的重生称为进入“八数界”的变化。这个神秘数字被称为上方的耶路撒冷、流奶与蜜之地、圣灵以及主之地。依照马丁主义，八是基督的数字。"
       },
       {
             "id": 2,
@@ -638,10 +673,8 @@
             "en": "The High Priestess",
             "cn": "女祭司",
             "file": "RWS_Tarot_02_High_Priestess.jpg",
-            "waiteDescEn": "She has the lunar crescent at her feet, a horned diadem on her head, with a globe in the middle place, and a large solar cross on her breast. The scroll in her hands is inscribed with the word Tora , signifying the Greater Law, the Secret Law and the second sense of the Word. It is partly covered by her mantle, to shew that some things are implied and some spoken. She is seated between the white and black pillars--J. and B.--of the mystic Temple, and the veil of the Temple is behind her: it is embroidered with palms and pomegranates. The vestments are flowing and gauzy, and the mantle suggests light--a shimmering radiance. She has been called occult Science on the threshold of the Sanctuary of Isis, but she is really the Secret Church, the House which is of God and man.",
-            "waiteDescCn": "她脚下有月牙，头戴有球体的角状冠冕，胸前有太阳十字；手中卷轴写着 Tora，象征更高与隐秘的律法。她坐在黑白双柱之间，身后圣殿帷幕绣有棕榈与石榴，衣袍流动而轻透，披风像闪烁的光。",
-            "waiteMeaningEn": "Secrets, mystery, the future as yet unrevealed; the woman who interests the Querent, if male; the Querent herself, if female; silence, tenacity; mystery, wisdom, science. Reversed : Passion, moral or physical ardour, conceit, surface knowledge.",
-            "waiteMeaningCn": "秘密、神秘、尚未揭示的未来；若问卜者为男性，指其所关心的女性；若为女性，指问卜者本人；沉默、坚韧；神秘、智慧、学问。逆位：热情、道德或肉体上的炽热、虚荣、表层知识。"
+            "waiteDescEn": "She has the lunar crescent at her feet, a horned diadem on her head, with a globe in the middle place, and a large solar cross on her breast. The scroll in her hands is inscribed with the word Tora, signifying the Greater Law, the Secret Law and the second sense of the Word. It is partly covered by her mantle, to shew that some things are implied and some spoken. She is seated between the white and black pillars--J. and B.--of the mystic Temple, and the veil of the Temple is behind her: it is embroidered with palms and pomegranates. The vestments are flowing and gauzy, and the mantle suggests light--a shimmering radiance. She has been called occult Science on the threshold of the Sanctuary of Isis, but she is really the Secret Church, the House which is of God and man. She represents also the Second Marriage of the Prince who is no longer of this world; she is the spiritual Bride and Mother, the daughter of the stars and the Higher Garden of Eden. She is, in fine, the Queen of the borrowed light, but this is the light of all. She is the Moon nourished by the milk of the Supernal Mother. In a manner, she is also the Supernal Mother herself--that is to say, she is the bright reflection. It is in this sense of reflection that her truest and highest name in bolism is Shekinah --the co-habiting glory. According to Kabalism, there is a Shekinah both above and below. In the superior world it is called Binah, the Supernal Understanding which reflects to the emanations that are beneath. In the lower world it is MaIkuth --that world being, for this purpose, understood as a blessed Kingdom that with which it is made blessed being the Indwelling Glory. Mystically speaking, the Shekinah is the Spiritual Bride of the just man, and when he reads the Law she gives the Divine meaning. There are some respects in which this card is the highest and holiest of the Greater Arcana.",
+            "waiteDescCn": "她脚下有月牙，头戴有角冠冕，中央有一颗球体，胸前有巨大的太阳十字。她手中的卷轴写着“Tora”，表示更大的律法、秘密的律法，以及圣言的第二层意义。卷轴的一部分被她的披 mantle 遮住，以显示有些事只是暗示，有些事则被说出。她坐在神秘圣殿的黑白两柱之间，即 J 与 B 两柱；圣殿的帷幕在她身后，绣有棕榈和石榴。她的衣袍流动而轻薄，披 mantle 暗示光，如闪烁的辉辉。她曾被称为伊西斯圣所门槛上的隐秘科学，但她真正是秘密教会，是属于上帝与人的殿。她也代表已不再属于此世的王子的第二次婚姻；她是精神的新娘与母亲，是星辰之女，也是更高的伊甸园。总之，她是借来之光的女王，但这光属于一切。她是月亮，由超上母亲的乳汁滋养。在某种方式上，她也是超上母亲自身，也就是说，她是明亮的反映。正是在这种反映的意义上，她在象征中最真实、最高的名字是 Shekinah，即同住的荣耀。依照卡巴拉，上方与下方各有一个 Shekinah。在较高的世界中，它名为 Binah，即超上的理解，它向下方的流溢反射。在较低的世界中，它是 Malkuth；在这里，这个世界被理解为一个蒙福的王国，而使它蒙福者就是内住的荣耀。从神秘意义上说，Shekinah 是义人的精神新娘；当他阅读律法时，她给予神圣意义。在某些方面，此牌是大阿尔卡纳中最高也最神圣的牌。"
       },
       {
             "id": 3,
@@ -650,10 +683,8 @@
             "en": "The Empress",
             "cn": "皇后",
             "file": "RWS_Tarot_03_Empress.jpg",
-            "waiteDescEn": "A stately figure, seated, having rich vestments and royal aspect, as of a daughter of heaven and earth. Her diadem is of twelve stars, gathered in a cluster. The symbol of Venus is on the shield which rests near her. A field of corn is ripening in front of her, and beyond there is a fall of water.",
-            "waiteDescCn": "她是庄严的坐姿人物，衣饰华贵、气质如天地之女；冠冕由十二颗星聚成。维纳斯符号在她身旁的盾上，前方麦田成熟，远处有瀑布。",
-            "waiteMeaningEn": "Fruitfulness, action, initiative, length of days; the unknown, clandestine; also difficulty, doubt, ignorance. Reversed : Light, truth, the unravelling of involved matters, public rejoicings; according to another reading, vacillation.",
-            "waiteMeaningCn": "丰饶、行动、主动、长寿；未知与隐秘；也指困难、疑虑、无知。逆位：光明、真相、复杂事情的解开、公众的欢庆；另一种读法为犹豫不决。"
+            "waiteDescEn": "A stately figure, seated, having rich vestments and royal aspect, as of a daughter of heaven and earth. Her diadem is of twelve stars, gathered in a cluster. The symbol of Venus is on the shield which rests near her. A field of corn is ripening in front of her, and beyond there is a fall of water. The sceptre which she bears is surmounted by the globe of this world. She is the inferior Garden of Eden, the Earthly Paradise, all that is symbolized by the visible house of man. She is not Regina coeli, but she is still refugium peccatorum, the fruitful mother of thousands. There are also certain aspects in which she has been correctly described as desire and the wings thereof, as the woman clothed with the sun, as Gloria Mundi and the veil of the Sanctum Sanctorum; but she is not, I may add, the soul that has attained wings, unless all the symbolism is counted up another and unusual way. She is above all things universal fecundity and the outer sense of the Word. This is obvious, because there is no direct message which has been given to man like that which is borne by woman; but she does not herself carry its interpretation. In another order of ideas, the card of the Empress signifies the door or gate by which an entrance is obtained into this life, as into the Garden of Venus; and then the way which leads out therefrom, into that which is beyond, is the secret known to the High Priestess: it is communicated by her to the elect. Most old attributions of this card are completely wrong on the symbolism--as, for example, its identification with the Word, Divine Nature, the Triad, and so forth.",
+            "waiteDescCn": "一位庄严的人物端坐着，衣饰华美，具有王者气象，仿佛天地之女。她的冠冕由十二颗星聚成一簇。维纳斯的符号在靠近她的盾牌上。她面前有一片正在成熟的麦田，远处有一道瀑布。她所持权杖顶端是此世界的球体。她是较低的伊甸园、尘世的天堂，以及由人的可见居所所象征的一切。她不是天后，但仍是“罪人之庇护所”，是千万生命的丰饶母亲。还有一些方面，人们正确地把她描述为欲望及其羽翼，描述为披着太阳的女人，描述为世界的荣耀和至圣所的帷幕；但我要补充的是，她并不是已经获得羽翼的灵魂，除非人们以另一种不寻常的方式计算全部象征。她首先是一切事物的普遍繁殖力，也是圣言的外在意义。这一点很明显，因为没有什么直接信息像女性所承载的那样给予人；但她自身并不携带其解释。在另一组观念中，皇后牌象征进入此生命的门或入口，如同进入维纳斯花园；而从此处通向彼岸的道路，则是女祭司所知道的秘密，并由她传达给被选者。关于此牌的大多数旧归属在象征上完全错误，例如把它认同为圣言、神圣本性、三位一体等等。"
       },
       {
             "id": 4,
@@ -662,10 +693,8 @@
             "en": "The Emperor",
             "cn": "皇帝",
             "file": "RWS_Tarot_04_Emperor.jpg",
-            "waiteDescEn": "He has a form of the Crux ansata for his sceptre and a globe in his left hand. He is a crowned monarch--commanding, stately, seated on a throne, the arms of which axe fronted by rams' heads.",
-            "waiteDescCn": "他以生命十字形权杖和左手中的地球为标志，是一位加冕的君主，威严而端坐王座，王座扶手前饰有公羊头。",
-            "waiteMeaningEn": "Stability, power, protection, realization; a great person; aid, reason, conviction; also authority and will. Reversed : Benevolence, compassion, credit; also confusion to enemies, obstruction, immaturity.",
-            "waiteMeaningCn": "稳定、力量、保护、实现；重要人物；援助、理性、信念；也指权威与意志。逆位：仁慈、同情、信用；也可指敌人的混乱、阻碍、未成熟。"
+            "waiteDescEn": "He has a form of the Crux ansata for his sceptre and a globe in his left hand. He is a crowned monarch--commanding, stately, seated on a throne, the arms of which axe fronted by rams' heads. He is executive and realization, the power of this world, here clothed with the highest of its natural attributes. He is occasionally represented as seated on a cubic stone, which, however, confuses some of the issues. He is the virile power, to which the Empress responds, and in this sense is he who seeks to remove the Veil of Isis; yet she remains virgo intacta. It should be understood that this card and that of the Empress do not precisely represent the condition of married life, though this state is implied. On the surface, as I have indicated, they stand for mundane royalty, uplifted on the seats of the mighty; but above this there is the suggestion of another presence. They signify also--and the male figure especially--the higher kingship, occupying the intellectual throne. Hereof is the lordship of thought rather than of the animal world. Both personalities, after their own manner, are \"full of strange experience,\" but theirs is not consciously the wisdom which draws from a higher world. The Emperor has been described as (a) will in its embodied form, but this is only one of its applications, and (b) as an expression of virtualities contained in the Absolute Being--but this is fantasy.",
+            "waiteDescCn": "他的权杖呈生命十字的形态，左手持有一个球体。他是一位加冕的君主，威严而庄重地端坐王座；王座扶手前端饰有公羊头。他是执行力与实现，是此世界的力量，并披上其最高的自然属性。他有时被表现为坐在立方石上，但这会混淆某些问题。他是阳刚的力量，皇后对此作出回应；在这个意义上，他是试图揭开伊西斯面纱者，然而她仍然是完整无损的贞女。应当明白，此牌与皇后牌并不精确代表婚姻生活的状态，虽然这种状态被包含在内。表面上，如我所指出的，它们代表尘世王权，高坐于权贵之座；但在此之上还暗示着另一种临在。它们也象征，尤其是男性形象，较高的王权，即占据理智王座的王权。这里所说的是思想的主宰，而不是动物世界的主宰。两个个性以各自的方式都“充满奇异经验”，但他们并不自觉拥有来自更高世界的智慧。皇帝曾被描述为意志的具身形式，但这只是它的一种应用；也被描述为绝对存在中所含潜能的表达，但这是幻想。"
       },
       {
             "id": 5,
@@ -674,10 +703,8 @@
             "en": "The Hierophant",
             "cn": "教皇",
             "file": "RWS_Tarot_05_Hierophant.jpg",
-            "waiteDescEn": "He wears the triple crown and is seated between two pillars, but they are not those of the Temple which is guarded by the High Priestess. In his left hand he holds a sceptre terminating in the triple cross, and with his right hand he gives the well-known ecclesiastical sign which is called that of esotericism, distinguishing between the manifest and concealed part of doctrine. It is noticeable in this connexion that the High Priestess makes no sign. At his feet are the crossed keys, and two priestly ministers in albs kneel before him. He has been usually called the Pope, which is a particular application of the more general office that he symbolizes. He is the ruling power of external religion, as the High Priestess is the prevailing genius of the esoteric, withdrawn power.",
-            "waiteDescCn": "他戴三重冠，坐在两根柱子之间；左手持三重十字权杖，右手作出教会的手势，区分教义中显明与隐藏的部分。脚下有交叉钥匙，两名祭司侍者跪在他前方。",
-            "waiteMeaningEn": "Marriage, alliance, captivity, servitude; by another account, mercy and goodness; inspiration; the man to whom the Querent has recourse. Reversed : Society, good understanding, concord, overkindness, weakness.",
-            "waiteMeaningCn": "婚姻、联盟、囚禁、服从；另一说为仁慈与善意；灵感；问卜者求助的人。逆位：社交、良好理解、和谐、过度好心、软弱。"
+            "waiteDescEn": "He wears the triple crown and is seated between two pillars, but they are not those of the Temple which is guarded by the High Priestess. In his left hand he holds a sceptre terminating in the triple cross, and with his right hand he gives the well-known ecclesiastical sign which is called that of esotericism, distinguishing between the manifest and concealed part of doctrine. It is noticeable in this connexion that the High Priestess makes no sign. At his feet are the crossed keys, and two priestly ministers in albs kneel before him. He has been usually called the Pope, which is a particular application of the more general office that he symbolizes. He is the ruling power of external religion, as the High Priestess is the prevailing genius of the esoteric, withdrawn power. The proper meanings of this card have suffered woeful admixture from nearly all hands. Grand Orient says truly that the Hierophant is the power of the keys, exoteric orthodox doctrine, and the outer side of the life which leads to the doctrine; but he is certainly not the prince of occult doctrine, as another commentator has suggested. He is rather the summa totius theologiæ, when it has passed into the utmost rigidity of expression; but he symbolizes also all things that are righteous and sacred on the manifest side. As such, he is the channel of grace belonging to the world of institution as distinct from that of Nature, and he is the leader of salvation for the human race at large. He is the order and the head of the recognized hierarchy, which is the reflection of another and greater hierarchic order; but it may so happen that the pontiff forgets the significance of this his symbolic state and acts as if he contained within his proper measures all that his sign signifies or his symbol seeks to shew forth. He is not, as it has been thought, philosophy-except on the theological side; he is not inspiration; and he is not religion, although he is a mode of its expression.",
+            "waiteDescCn": "他戴三重冠，坐在两根柱子之间，但这不是女祭司所守护的圣殿之柱。他左手持一柄以三重十字结束的权杖，右手作出著名的教会手势；这个手势被称为秘传主义的手势，用以区分教义中显明与隐藏的部分。值得注意的是，在这一点上女祭司并不作手势。他脚下有交叉的钥匙，两名穿白袍的祭司侍者跪在他面前。他通常被称为教皇，但这只是他所象征的更普遍职能的一种特定应用。他是外在宗教的统治力量，正如女祭司是内秘、隐退力量的主导精神。此牌的正当含义在几乎所有人手中都遭受了可悲的混杂。Grand Orient 说得正确：教皇是钥匙的力量、显教正统教义，以及通向教义之生活的外在面；但他绝不是另一位注释者所说的隐秘教义之王子。他更像是神学大全在表达上达到极端僵硬之后的形态；但他也象征显明层面上一切正义而神圣的事物。因此，他是制度世界中的恩典通道，与自然世界有所区别；他也是整个人类的救赎领袖。他是公认等级秩序的秩序与首领，而这个等级秩序又反映另一个更伟大的等级秩序；但也可能发生这样的情况：这位祭司忘记自己象征状态的意义，并表现得仿佛他在自己的限度内包含了他的标记所表示或他的象征试图显示的一切。他并不像人们所想的那样是哲学，除非在神学方面；他不是灵感；他也不是宗教，虽然他是宗教的一种表达方式。"
       },
       {
             "id": 6,
@@ -686,10 +713,8 @@
             "en": "The Lovers",
             "cn": "恋人",
             "file": "RWS_Tarot_06_Lovers.jpg",
-            "waiteDescEn": "The sun shines in the zenith, and beneath is a great winged figure with arms extended, pouring down influences. In the foreground are two human figures, male and female, unveiled before each other, as if Adam and Eve when they first occupied the paradise of the earthly body. Behind the man is the Tree of Life, bearing twelve fruits, and the Tree of the Knowledge of Good and Evil is behind the woman; the serpent is twining round it. The figures suggest youth, virginity, innocence and love before it is contaminated by gross material desire. This is in all simplicity the card of human love, here exhibited as part of the way, the truth and the life. It replaces, by recourse to first principles, the old card of marriage, which I have described previously, and the later follies which depicted man between vice and virtue. In a very high sense, the card is a mystery of the Covenant and Sabbath.",
-            "waiteDescCn": "太阳在天顶照耀，巨大的有翼形象伸展双臂，向下倾注影响。前景中男女彼此坦露，如亚当与夏娃初入身体的天堂；生命之树在男子身后，善恶知识树与蛇在女子身后。",
-            "waiteMeaningEn": "Attraction, love, beauty, trials overcome. Reversed : Failure, foolish designs. Another account speaks of marriage frustrated and contrarieties of all kinds.",
-            "waiteMeaningCn": "吸引、爱情、美、克服考验。逆位：失败、愚蠢的计划。另一说为婚姻受阻以及各种相反情形。"
+            "waiteDescEn": "The sun shines in the zenith, and beneath is a great winged figure with arms extended, pouring down influences. In the foreground are two human figures, male and female, unveiled before each other, as if Adam and Eve when they first occupied the paradise of the earthly body. Behind the man is the Tree of Life, bearing twelve fruits, and the Tree of the Knowledge of Good and Evil is behind the woman; the serpent is twining round it. The figures suggest youth, virginity, innocence and love before it is contaminated by gross material desire. This is in all simplicity the card of human love, here exhibited as part of the way, the truth and the life. It replaces, by recourse to first principles, the old card of marriage, which I have described previously, and the later follies which depicted man between vice and virtue. In a very high sense, the card is a mystery of the Covenant and Sabbath. The suggestion in respect of the woman is that she signifies that attraction towards the sensitive life which carries within it the idea of the Fall of Man, but she is rather the working of a Secret Law of Providence than a willing and conscious temptress. It is through her imputed lapse that man shall arise ultimately, and only by her can he complete himself. The card is therefore in its way another intimation concerning the great mystery of womanhood. The old meanings fall to pieces of necessity with the old pictures, but even as interpretations of the latter, some of them were of the order of commonplace and others were false in symbolism.",
+            "waiteDescCn": "太阳在天顶照耀，下面有一个巨大的有翼形象伸展双臂，向下倾注影响。前景中有两个人形，一男一女，在彼此面前没有遮蔽，仿佛亚当和夏娃初次占据尘世身体的天堂之时。男人身后是生命树，结有十二枚果实；女人身后是善恶知识树，蛇缠绕其上。这些形象暗示青春、贞洁、无辜，以及尚未被粗重物质欲望污染的爱。简而言之，这是一张人类之爱的牌，在这里作为道路、真理与生命的一部分被展示。它通过回到第一原则，取代了我先前描述过的旧婚姻牌，也取代了后来把人画在恶德与美德之间的愚蠢图像。在非常高的意义上，此牌是圣约与安息日的奥秘。关于第六牌的旧含义，我对其中较高批评的象征价值作了足够说明。在各版本较晚的排列中，有些属于平庸之列，有些在象征上是错误的。"
       },
       {
             "id": 7,
@@ -698,10 +723,8 @@
             "en": "The Chariot",
             "cn": "战车",
             "file": "RWS_Tarot_07_Chariot.jpg",
-            "waiteDescEn": "An erect and princely figure carrying a drawn sword and corresponding, broadly speaking, to the traditional description which I have given in the first part. On the shoulders of the victorious hero are supposed to be the Urim and Thummim . He has led captivity captive; he is conquest on all planes--in the mind, in science, in progress, in certain trials of initiation. He has thus replied to the sphinx, and it is on this account that I have accepted the variation of Éliphas Lévi; two sphinxes thus draw his chariot. He is above all things triumph in the mind.",
-            "waiteDescCn": "一位挺立的王者形象持出鞘之剑，肩上象征乌陵与土明。他已俘获囚禁本身，是各层面的胜利：心智、学问、进步与某些启蒙试炼；两只斯芬克斯牵引他的战车。",
-            "waiteMeaningEn": "Succour, providence also war, triumph, presumption, vengeance, trouble. Reversed : Riot, quarrel, dispute, litigation, defeat.",
-            "waiteMeaningCn": "援助、天佑；也指战争、胜利、自负、复仇、麻烦。逆位：骚乱、争吵、争端、诉讼、失败。"
+            "waiteDescEn": "An erect and princely figure carrying a drawn sword and corresponding, broadly speaking, to the traditional description which I have given in the first part. On the shoulders of the victorious hero are supposed to be the Urim and Thummim. He has led captivity captive; he is conquest on all planes--in the mind, in science, in progress, in certain trials of initiation. He has thus replied to the sphinx, and it is on this account that I have accepted the variation of Éliphas Lévi; two sphinxes thus draw his chariot. He is above all things triumph in the mind. It is to be understood for this reason (a) that the question of the sphinx is concerned with a Mystery of Nature and not of the world of Grace, to which the charioteer could offer no answer; (b) that the planes of his conquest are manifest or external and not within himself; (c) that the liberation which he effects may leave himself in the bondage of the logical understanding; (d) that the tests of initiation through which he has passed in triumph are to be understood physically or rationally; and (e) that if he came to the pillars of that Temple between which the High Priestess is seated, he could not open the scroll called Tora, nor if she questioned him could he answer. He is not hereditary royalty and he is not priesthood.",
+            "waiteDescCn": "一个挺立而具王子气质的人物持着出鞘之剑，大体上对应我在第一部分给出的传统描述。据说这位胜利英雄的肩上有乌陵与土明。他已经“掳掠了被掳者”；他是在一切层面上的征服，包括心智、科学、进步以及某些入门试炼。因此他已经回答了斯芬克斯，也正因如此我接受了 Éliphas Lévi 的变体；于是两只斯芬克斯拉着他的战车。他首先是心智中的胜利。应当理解，一，问题有关理解者；二，战车的平面以及他的胜利不在自然界中，而在被解放心智的支柱中。他对于制度化奥秘的继承是合乎逻辑的，而非事实上的。他的征服可能承载着推理之剑；但他不是继承祭司职能者，女祭司不可能在他脚下读到圣言，若她询问他，他也无法回答。他既不是世袭王权，也不是祭司职分。"
       },
       {
             "id": 8,
@@ -710,10 +733,8 @@
             "en": "Strength",
             "cn": "力量",
             "file": "RWS_Tarot_08_Strength.jpg",
-            "waiteDescEn": "A woman, over whose head there broods the same symbol of life which we have seen in the card of the Magician, is closing the jaws of a lion. The only point in which this design differs from the conventional presentations is that her beneficent fortitude has already subdued the lion, which is being led by a chain of flowers. For reasons which satisfy myself, this card has been interchanged with that of justice, which is usually numbered eight. As the variation carries nothing with it which will signify to the reader, there is no cause for explanation. Fortitude, in one of its most exalted aspects, is connected with the Divine Mystery of Union; the virtue, of course, operates in all planes, and hence draws on all in its symbolism. It connects also with innocentia inviolata , and with the strength which resides in contemplation.",
-            "waiteDescCn": "一名女子合上狮子的口，头顶有与魔术师相同的生命符号。她仁慈的坚忍已经驯服狮子，狮子被花链牵引；这张牌象征最崇高意义上的力量。",
-            "waiteMeaningEn": "Power, energy, action, courage, magnanimity; also complete success and honours. Reversed : Despotism, abuse if power, weakness, discord, sometimes even disgrace.",
-            "waiteMeaningCn": "力量、能量、行动、勇气、宽宏；也指完全的成功与荣誉。逆位：专横、滥用力量、软弱、不和，有时甚至为耻辱。"
+            "waiteDescEn": "A woman, over whose head there broods the same symbol of life which we have seen in the card of the Magician, is closing the jaws of a lion. The only point in which this design differs from the conventional presentations is that her beneficent fortitude has already subdued the lion, which is being led by a chain of flowers. For reasons which satisfy myself, this card has been interchanged with that of justice, which is usually numbered eight. As the variation carries nothing with it which will signify to the reader, there is no cause for explanation. Fortitude, in one of its most exalted aspects, is connected with the Divine Mystery of Union; the virtue, of course, operates in all planes, and hence draws on all in its symbolism. It connects also with innocentia inviolata, and with the strength which resides in contemplation. These higher meanings are, however, matters of inference, and I do not suggest that they are transparent on the surface of the card. They are intimated in a concealed manner by the chain of flowers, which signifies, among many other things, the sweet yoke and the light burden of Divine Law, when it has been taken into the heart of hearts. The card has nothing to do with self-confidence in the ordinary sense, though this has been suggested--but it concerns the confidence of those whose strength is God, who have found their refuge in Him. There is one aspect in which the lion signifies the passions, and she who is called Strength is the higher nature in its liberation. It has walked upon the asp and the basilisk and has trodden down the lion and the dragon.",
+            "waiteDescCn": "一个女人正在合上狮子的口，她头上方盘旋着我们在魔术师牌中见过的同一生命符号。这个设计与传统表现的唯一不同之处在于，她仁慈的坚忍已经驯服了狮子，而狮子正由一条花链牵引。出于令我自己满意的理由，此牌与通常编号为八的正义牌互换了位置。由于这种变动并不携带会向读者表示意义的东西，因此没有解释的必要。坚忍在其最高层面之一，与合一的神圣奥秘相连；这种德性当然在一切层面运作，因此在象征上也吸纳一切。它也与不可侵犯的纯真相连，并与存在于沉思中的力量相连。这些较高的含义却是推论出来的，我并不建议超出其在图像上的显明含义来解读。在通常的说法中，这张牌与“力量”有关；但这是本义之外的第二义；我也不觉得这里与自信有关，至少不是通常意义上的自信。力量在其最崇高的本性中与之前的魔术师和之后的战车相连。它也关乎纯真的信任，关乎其力量在沉思中获得庇护。它曾行走在虺蛇与毒蛇之上，并踏下狮子与巨龙。"
       },
       {
             "id": 9,
@@ -722,10 +743,8 @@
             "en": "The Hermit",
             "cn": "隐者",
             "file": "RWS_Tarot_09_Hermit.jpg",
-            "waiteDescEn": "The variation from the conventional models in this card is only that the lamp is not enveloped partially in the mantle of its bearer, who blends the idea of the Ancient of Days with the Light of the World It is a star which shines in the lantern. I have said that this is a card of attainment, and to extend this conception the figure is seen holding up his beacon on an eminence. Therefore the Hermit is not, as Court de Gebelin explained, a wise man in search of truth and justice; nor is he, as a later explanation proposes, an especial example of experience. His beacon intimates that",
-            "waiteDescCn": "这张牌与传统图式的差别在于灯并未被持灯者斗篷遮住；他融合了“亘古者”与“世界之光”的意象，灯中有星。他站在高处举起灯塔，因此隐者不是单纯寻求真理的人，而是成就与照明的象征。",
-            "waiteMeaningEn": "Prudence, circumspection; also and especially treason, dissimulation, roguery, corruption. Reversed : Concealment, disguise, policy, fear, unreasoned caution.",
-            "waiteMeaningCn": "谨慎、慎重；也尤其指背叛、伪装、恶作剧、腐败。逆位：隐藏、伪装、策略、恐惧、无理由的谨慎。"
+            "waiteDescEn": "The variation from the conventional models in this card is only that the lamp is not enveloped partially in the mantle of its bearer, who blends the idea of the Ancient of Days with the Light of the World It is a star which shines in the lantern. I have said that this is a card of attainment, and to extend this conception the figure is seen holding up his beacon on an eminence. Therefore the Hermit is not, as Court de Gebelin explained, a wise man in search of truth and justice; nor is he, as a later explanation proposes, an especial example of experience. His beacon intimates that \"where I am, you also may be.\" It is further a card which is understood quite incorrectly when it is connected with the idea of occult isolation, as the protection of personal magnetism against admixture. This is one of the frivolous renderings which we owe to Éliphas Lévi. It has been adopted by the French Order of Martinism and some of us have heard a great deal of the Silent and Unknown Philosophy enveloped by his mantle from the knowledge of the profane. In true Martinism, the significance of the term Philosophe inconnu was of another order. It did not refer to the intended concealment of the Instituted Mysteries, much less of their substitutes, but--like the card itself--to the truth that the Divine Mysteries secure their own protection from those who are unprepared.",
+            "waiteDescCn": "此牌与传统模型的差异只在于灯没有部分被披 mantle 遮住。此牌在本质上体现精神完成的观念，因此其老人形象面向他的前方。它显示保护与引导，而这正如我所说，是大礼物的恩典。然而，他的灯含有星的光芒。应当知道，这是所到达之处的标记，并且在峰顶上方不再可能有更高处。因此，隐者不是在寻找真理与正义，如 Court de Gébelin 所解释；也不像后来一种解释所说，是经验的特殊例子。他的灯塔暗示“我所在之处，你们也可以在那里”。进一步说，这张牌被人相当不当地与隐秘孤立的观念相连，用来作为个人磁力抵抗混杂的安全保障。事实上它更像是一张成就牌，正如我们已经看到，延展在整个序列中的大阿尔卡纳并不是通过较低层面的字母或路径来形成的。就最后一点而言，真正的卡巴拉解释只关系到它的一小部分。还有人说他的灯是知识之灯，但这只是一种偶然应用；而他的斗篷是谨慎的斗篷，又如我已经指出的，是神圣奥秘保护自己免于未准备者接近的真理。"
       },
       {
             "id": 10,
@@ -734,10 +753,8 @@
             "en": "Wheel of Fortune",
             "cn": "命运之轮",
             "file": "RWS_Tarot_10_Wheel_of_Fortune.jpg",
-            "waiteDescEn": "In this symbol I have again followed the reconstruction of Éliphas Lévi, who has furnished several variants. It is legitimate--as I have intimated--to use Egyptian symbolism when this serves our purpose, provided that no theory of origin is implied therein. I have, however, presented Typhon in his serpent form. The symbolism is, of course, not exclusively Egyptian, as the four Living Creatures of Ezekiel occupy the angles of the card, and the wheel itself follows other indications of Lévi in respect of Ezekiel's vision, as illustrative of the particular Tarot Key. With the French occultist, and in the design itself, the symbolic picture stands for the perpetual motion of a fluidic universe and for the flux of human life. The Sphinx is the equilibrium therein. The transliteration of Taro as Rota is inscribed on the wheel, counterchanged with the letters of the Divine Name--to shew that Providence is imphed through all. But this is the Divine intention within, and the similar intention without is exemplified by the four Living Creatures. Sometimes the sphinx is represented couchant on a pedestal above, which defrauds the symbolism by stultifying the essential idea of stability amidst movement.",
-            "waiteDescCn": "这个符号采用了 Éliphas Lévi 的重构，并可借用埃及象征而不暗示起源。四活物占据牌角，轮本身呼应以西结异象；在法国神秘学家的体系中，象征循环运动与宇宙秩序。",
-            "waiteMeaningEn": "Destiny, fortune, success, elevation, luck, felicity. Reversed : Increase, abundance, superfluity.",
-            "waiteMeaningCn": "命运、好运、成功、提升、幸运、幸福。逆位：增加、丰足、过剩。"
+            "waiteDescEn": "In this symbol I have again followed the reconstruction of Éliphas Lévi, who has furnished several variants. It is legitimate--as I have intimated--to use Egyptian symbolism when this serves our purpose, provided that no theory of origin is implied therein. I have, however, presented Typhon in his serpent form. The symbolism is, of course, not exclusively Egyptian, as the four Living Creatures of Ezekiel occupy the angles of the card, and the wheel itself follows other indications of Lévi in respect of Ezekiel's vision, as illustrative of the particular Tarot Key. With the French occultist, and in the design itself, the symbolic picture stands for the perpetual motion of a fluidic universe and for the flux of human life. The Sphinx is the equilibrium therein. The transliteration of Taro as Rota is inscribed on the wheel, counterchanged with the letters of the Divine Name--to shew that Providence is imphed through all. But this is the Divine intention within, and the similar intention without is exemplified by the four Living Creatures. Sometimes the sphinx is represented couchant on a pedestal above, which defrauds the symbolism by stultifying the essential idea of stability amidst movement. Behind the general notion expressed in the symbol there lies the denial of chance and the fatality which is implied therein. It may be added that, from the days of Lévi onward, the occult explanations of this card are--even for occultism itself--of a singularly fatuous kind. It has been said to mean principle, fecundity, virile honour, ruling authority, etc. The findings of common fortune-telling are better than this on their own plane.",
+            "waiteDescCn": "在这个象征中，我再次遵循 Éliphas Lévi 的重构，他提供过若干变体。如我已经暗示过，只要符合我们的目的，使用埃及象征是正当的，前提是其中并不暗示任何起源理论。不过，我把堤丰表现为蛇的形态。当然，这套象征并非完全属于埃及，因为以西结的四活物占据牌的四角，而轮本身也遵循 Lévi 关于以西结异象的其他提示，用来说明这一特定塔罗钥匙。依照这位法国神秘学者，也依照牌面设计本身，象征图像代表流动宇宙的永恒运动，以及人类生命的流转。斯芬克斯就是其中的平衡。Taro 转写为 Rota 被刻在轮上，并与神名的字母交替，以显示天命贯穿一切。但这是内在的神圣意图，而外在的相似意图由四活物体现。有时斯芬克斯被表现为卧在上方的基座上，这会使象征失真，因为它削弱了运动中稳定这一核心观念。隐藏在此象征所表达的一般观念之后的，是对偶然性的否定，以及其中所暗含的必然性。还可以补充说，自 Lévi 以来，关于此牌的隐秘解释，即使对神秘学本身而言，也异常愚钝。有人说它表示原则、繁殖力、阳刚荣誉、统治权威等等。普通算命在自身层面上的发现，反而比这些更好。"
       },
       {
             "id": 11,
@@ -746,10 +763,8 @@
             "en": "Justice",
             "cn": "正义",
             "file": "RWS_Tarot_11_Justice.jpg",
-            "waiteDescEn": "As this card follows the traditional symbolism and carries above all its obvious meanings, there is little to say regarding it outside the few considerations collected in the first part, to which the reader is referred.",
-            "waiteDescCn": "这张牌遵循传统象征，明显承载公平与正义的含义；除前文已有说明外，Waite 在此没有追加太多解释。",
-            "waiteMeaningEn": "Equity, rightness, probity, executive; triumph of the deserving side in law. Reversed : Law in all its departments, legal complications, bigotry, bias, excessive severity.",
-            "waiteMeaningCn": "公平、正当、正直、执行；法律中应得一方的胜利。逆位：法律事务、法律纠纷、偏执、偏见、过度严厉。"
+            "waiteDescEn": "As this card follows the traditional symbolism and carries above all its obvious meanings, there is little to say regarding it outside the few considerations collected in the first part, to which the reader is referred. It will be seen, however, that the figure is seated between pillars, like the High Priestess, and on this account it seems desirable to indicate that the moral principle which deals unto every man according to his works--while, of course, it is in strict analogy with higher things;--differs in its essence from the spiritual justice which is involved in the idea of election. The latter belongs to a mysterious order of Providence, in virtue of which it is possible for certain men to conceive the idea of dedication to the highest things. The operation of this is like the breathing of the Spirit where it wills, and we have no canon of criticism or ground of explanation concerning it. It is analogous to the possession of the fairy gifts and the high gifts and the gracious gifts of the poet: we have them or have not, and their presence is as much a mystery as their absence. The law of Justice is not however involved by either alternative. In conclusion, the pillars of Justice open into one world and the pillars of the High Priestess into another.",
+            "waiteDescCn": "由于此牌遵循传统象征，并首先承载其明显含义，所以除第一部分所收集的几点考虑外，关于它几乎没有更多可说，读者可参照那里。然而可以看到，这个人物像女祭司一样坐在柱子之间；因此似乎有必要指出，按照各人行为给予报应的道德原则，虽然当然与更高事物严格相应，但其本质不同于包含在拣选观念中的精神正义。后者属于一种神秘的天命秩序，凭借它，某些人能够构想出献身于最高事物的观念。它的运作就像圣灵随意吹动的气息，而我们没有批判准则或解释基础来说明它。它类似于诗人对精灵礼物、高等礼物和恩典礼物的拥有；我们或有或无，而它们的存在与缺席同样神秘。然而正义的法则并不受任一选择牵连。总之，正义之柱通向一个世界，女祭司之柱通向另一个世界。"
       },
       {
             "id": 12,
@@ -758,10 +773,8 @@
             "en": "The Hanged Man",
             "cn": "倒吊人",
             "file": "RWS_Tarot_12_Hanged_Man (1).jpg",
-            "waiteDescEn": "The gallows from which he is suspended forms a Tau cross, while the figure--from the position of the legs--forms a fylfot cross. There is a nimbus about the head of the seeming martyr. It should be noted (1) that the tree of sacrifice is living wood, with leaves thereon; (2) that the face expresses deep entrancement, not suffering; (3) that the figure, as a whole, suggests life in suspension, but life and not death. It is a card of profound significance, but all the significance is veiled. One of his editors suggests that Éliphas Lévi did not know the meaning, which is unquestionable nor did the editor himself. It has been called falsely a card of martyrdom, a card a of prudence, a card of the Great Work, a card of duty; but we may exhaust all published interpretations and find only vanity.",
-            "waiteDescCn": "悬挂他的架子形成 Tau 十字，人物腿部姿势构成 fylfot 十字；头部有光环。他的脸不是痛苦而是深度入神，整体暗示生命被悬置，但仍是生命而非死亡。",
-            "waiteMeaningEn": "Wisdom, circumspection, discernment, trials, sacrifice, intuition, divination, prophecy. Reversed : Selfishness, the crowd, body politic.",
-            "waiteMeaningCn": "智慧、审慎、辨别力、考验、牺牲、直觉、占卜、预言。逆位：自私、群体、政治体。"
+            "waiteDescEn": "The gallows from which he is suspended forms a Tau cross, while the figure--from the position of the legs--forms a fylfot cross. There is a nimbus about the head of the seeming martyr. It should be noted (1) that the tree of sacrifice is living wood, with leaves thereon; (2) that the face expresses deep entrancement, not suffering; (3) that the figure, as a whole, suggests life in suspension, but life and not death. It is a card of profound significance, but all the significance is veiled. One of his editors suggests that Éliphas Lévi did not know the meaning, which is unquestionable nor did the editor himself. It has been called falsely a card of martyrdom, a card a of prudence, a card of the Great Work, a card of duty; but we may exhaust all published interpretations and find only vanity. I will say very simply on my own part that it expresses the relation, in one of its aspects, between the Divine and the Universe. He who can understand that the story of his higher nature is imbedded in this symbolism will receive intimations concerning a great awakening that is possible, and will know that after the sacred Mystery of Death there is a glorious Mystery of Resurrection.",
+            "waiteDescCn": "悬挂他的刑架形成 Tau 十字，而人物从双腿姿势看形成卐形十字。这个看似殉道者的头部周围有光轮。应注意三点：一，牺牲之树是活木，上面有叶；二，脸部表现深度入神，而不是痛苦；三，整个人物暗示悬置中的生命，但仍是生命而不是死亡。此牌意义深奥，但全部意义都被遮蔽。一位编辑者认为 Éliphas Lévi 不知道其意义，这一点无疑；而那位编辑者本人也不知道。它曾被错误地称为殉道牌、审慎牌、大业牌、义务牌；但我们可以穷尽所有已发表的解释，发现其中只有虚空。就我自己而言，我只很简单地说，它在某一方面表达了神圣与宇宙之间的关系。凡能理解其较高本性故事嵌入此象征中的人，将会获得关于一种可能的伟大觉醒的暗示，并且会知道，在神圣的死亡奥秘之后，还有荣耀的复活奥秘。"
       },
       {
             "id": 13,
@@ -770,10 +783,8 @@
             "en": "Death",
             "cn": "死神",
             "file": "RWS_Tarot_13_Death.jpg",
-            "waiteDescEn": "The veil or mask of life is perpetuated in change, transformation and passage from lower to higher, and this is more fitly represented in the rectified Tarot by one of the apocalyptic visions than by the crude notion of the reaping skeleton. Behind it lies the whole world of ascent in the spirit. The mysterious horseman moves slowly, bearing a black banner emblazoned with the Mystic Rose, which signifies life. Between two pillars on the verge of the horizon there shines the sun of immortality. The horseman carries no visible weapon, but king and child and maiden fall before him, while a prelate with clasped hands awaits his end.",
-            "waiteDescCn": "生命的面纱在变化、转化与由低向高的过渡中延续。神秘骑士缓慢前行，持黑旗，旗上有象征生命的神秘玫瑰；地平线两柱之间是不朽之阳。",
-            "waiteMeaningEn": "End, mortality, destruction, corruption also, for a man, the loss of a benefactor for a woman, many contrarieties; for a maid, failure of marriage projects. Reversed : Inertia, sleep, lethargy, petrifaction, somnambulism; hope destroyed.",
-            "waiteMeaningCn": "结束、死亡、毁灭、腐败；对男性可指失去恩人，对女性可指诸多不顺，对少女可指婚姻计划失败。逆位：惰性、睡眠、昏沉、僵化、梦游；希望破灭。"
+            "waiteDescEn": "The veil or mask of life is perpetuated in change, transformation and passage from lower to higher, and this is more fitly represented in the rectified Tarot by one of the apocalyptic visions than by the crude notion of the reaping skeleton. Behind it lies the whole world of ascent in the spirit. The mysterious horseman moves slowly, bearing a black banner emblazoned with the Mystic Rose, which signifies life. Between two pillars on the verge of the horizon there shines the sun of immortality. The horseman carries no visible weapon, but king and child and maiden fall before him, while a prelate with clasped hands awaits his end. There should be no need to point out that the suggestion of death which I have made in connection with the previous card is, of course, to be understood mystically, but this is not the case in the present instance. The natural transit of man to the next stage of his being either is or may be one form of his progress, but the exotic and almost unknown entrance, while still in this life, into the state of mystical death is a change in the form of consciousness and the passage into a state to which ordinary death is neither the path nor gate. The existing occult explanations of the 13th card are, on the whole, better than usual, rebirth, creation, destination, renewal, and the rest.",
+            "waiteDescCn": "生命的面纱或面具在改变、转化以及从低处向高处的通行中得以延续；在修正后的塔罗中，用启示录式的异象来表现它，比用收割骷髅的粗糙观念更恰当。在其背后，是精神上升的整个世界。神秘的骑士缓慢前行，举着饰有神秘玫瑰的黑旗，而这玫瑰象征生命。在地平线边缘的两根柱子之间，不朽的太阳正在闪耀。骑士没有携带可见武器，但国王、孩童和少女都倒在他面前，一位双手合十的高级教士等待自己的结局。没有必要指出，我在上一张牌中关于死亡所作的暗示，当然应作神秘意义上的理解；但当前这一张并非如此。人自然转入其存在的下一阶段，或许是他进步的一种形式；但在仍活于此生时，以异国而几乎未知的方式进入神秘死亡状态，是意识形式的改变，也是进入一种普通死亡既非道路也非门户的状态。第十三牌现有的隐秘解释总体上比平常更好，包括重生、创造、归宿、更新等等。"
       },
       {
             "id": 14,
@@ -782,10 +793,8 @@
             "en": "Temperance",
             "cn": "节制",
             "file": "RWS_Tarot_14_Temperance.jpg",
-            "waiteDescEn": "A winged angel, with the sign of the sun upon his forehead and on his breast the square and triangle of the septenary. I speak of him in the masculine sense, but the figure is neither male nor female. It is held to be pouring the essences of life from chalice to chalice. It has one foot upon the earth and one upon waters, thus illustrating the nature of the essences. A direct path goes up to certain heights on the verge of the horizon, and above there is a great light, through which a crown is seen vaguely. Hereof is some part of the Secret of Eternal Life, as it is possible to man in his incarnation. All the conventional emblems are renounced herein.",
-            "waiteDescCn": "有翼天使额上带太阳标志，胸前有七数的方形与三角；形象既非男性也非女性。它在两只圣杯之间倾注生命精华，一足踏地一足踏水，远方道路通向高处与隐约的冠冕之光。",
-            "waiteMeaningEn": "Economy, moderation, frugality, management, accommodation. Reversed : Things connected with churches, religions, sects, the priesthood, sometimes even the priest who will marry the Querent; also disunion, unfortunate combinations, competing interests.",
-            "waiteMeaningCn": "节约、适度、俭朴、管理、调和。逆位：与教会、宗教、教派、神职人员有关的事；有时甚至指将为问卜者主持婚礼的神父；也指分裂、不幸的组合、利益竞争。"
+            "waiteDescEn": "A winged angel, with the sign of the sun upon his forehead and on his breast the square and triangle of the septenary. I speak of him in the masculine sense, but the figure is neither male nor female. It is held to be pouring the essences of life from chalice to chalice. It has one foot upon the earth and one upon waters, thus illustrating the nature of the essences. A direct path goes up to certain heights on the verge of the horizon, and above there is a great light, through which a crown is seen vaguely. Hereof is some part of the Secret of Eternal Life, as it is possible to man in his incarnation. All the conventional emblems are renounced herein. So also are the conventional meanings, which refer to changes in the seasons, perpetual movement of life and even the combination of ideas. It is, moreover, untrue to say that the figure symbolizes the genius of the sun, though it is the analogy of solar light, realized in the third part of our human triplicity. It is called Temperance fantastically, because, when the rule of it obtains in our consciousness, it tempers, combines and harmonises the psychic and material natures. Under that rule we know in our rational part something of whence we came and whither we are going.",
+            "waiteDescCn": "一位有翼天使，额上有太阳标记，胸前有七数的方形与三角。我以男性称呼他，但这个形象既非男性也非女性。人们认为他正在把生命精华从一个圣杯倾注到另一个圣杯。他一足踏地，一足踏水，由此说明这些精华的性质。一条笔直的道路通向地平线边缘的某些高处，上方有巨大的光，透过光可以隐约看见一顶冠冕。这里包含永恒生命秘密的一部分，即人处于肉身状态时所可能获得的那一部分。所有传统徽记在此都被放弃。传统含义同样被放弃，那些含义涉及季节变化、生命的永恒运动，甚至观念的结合。此外，说这个形象象征太阳的守护灵并不正确，尽管它是太阳光的类比，在我们人类三重性中的第三部分实现。它被幻想性地称作节制，因为当其法则在我们的意识中取得支配时，它调节、结合并协调心理本性与物质本性。在这种法则之下，我们在理性部分中知道一些关于我们从何处来、往何处去的事情。"
       },
       {
             "id": 15,
@@ -794,10 +803,8 @@
             "en": "The Devil",
             "cn": "恶魔",
             "file": "RWS_Tarot_15_Devil.jpg",
-            "waiteDescEn": "The design is an accommodation, mean or harmony, between several motives mentioned in the first part. The Horned Goat of Mendes, with wings like those of a bat, is standing on an altar. At the pit of the stomach there is the sign of Mercury. The right hand is upraised and extended, being the reverse of that benediction which is given by the Hierophant in the fifth card. In the left hand there is a great flaming torch, inverted towards the earth. A reversed pentagram is on the forehead.",
-            "waiteDescCn": "图像综合了多个动机：门德斯的有角山羊，蝙蝠般的翅膀，站在祭坛上；腹部有水星标志，右手上举作出与教皇祝福相反的姿势，左手持倒向地面的火炬，额上有倒五芒星。",
-            "waiteMeaningEn": "Ravage, violence, vehemence, extraordinary efforts, force, fatality; that which is predestined but is not for this reason evil. Reversed : Evil fatality, weakness, pettiness, blindness.",
-            "waiteMeaningCn": "破坏、暴力、激烈、非凡努力、力量、宿命；预定之事，但并不因此就是邪恶。逆位：恶性的宿命、软弱、卑小、盲目。"
+            "waiteDescEn": "The design is an accommodation, mean or harmony, between several motives mentioned in the first part. The Horned Goat of Mendes, with wings like those of a bat, is standing on an altar. At the pit of the stomach there is the sign of Mercury. The right hand is upraised and extended, being the reverse of that benediction which is given by the Hierophant in the fifth card. In the left hand there is a great flaming torch, inverted towards the earth. A reversed pentagram is on the forehead. There is a ring in front of the altar, from which two chains are carried to the necks of two figures, male and female. These are analogous with those of the fifth card, as if Adam and Eve after the Fall. Hereof is the chain and fatality of the material life. The figures are tailed, to signify the animal nature, but there is human intelligence in the faces, and he who is exalted above them is not to be their master for ever. Even now, he is also a bondsman, sustained by the evil that is in him and blind to the liberty of service. With more than his usual derision for the arts which he pretended to respect and interpret as a master therein, Éliphas Lévi affirms that the Baphometic figure is occult science and magic. Another commentator says that in the Divine world it signifies predestination, but there is no correspondence in that world with the things which below are of the brute. What it does signify is the Dweller on the Threshold without the Mystical Garden when those are driven forth therefrom who have eaten the forbidden fruit.",
+            "waiteDescCn": "这个设计是在第一部分提到的若干动机之间作出的调和、折中或和谐。门德斯的有角山羊，带着蝙蝠般的翅膀，站在祭坛上。在胃部位置有水星的标记。右手举起并伸出，正好是第五牌教皇所给予祝福的反面。左手有一支巨大的燃烧火炬，倒向大地。额头上有倒置五芒星。祭坛前有一个环，两条锁链从环上延伸到一男一女两个人物的脖子上。这两个人物与第五牌中的人物相似，仿佛堕落之后的亚当与夏娃。这里表现的是物质生活的锁链与宿命。人物有尾巴，用以表示动物本性；但面孔中仍有人类智慧，而高踞在他们之上的那个存在并不会永远成为他们的主人。即使现在，他自己也是一个被缚者，由他内在的邪恶所支撑，并且对服务中的自由视而不见。Éliphas Lévi 一贯嘲弄那些他假装尊重并作为大师加以解释的技艺；他断言巴风特形象就是隐秘科学与魔法。另一位注释者说，在神圣世界中它表示预定，但在那个世界中，与下方野兽性事物并无对应。它真正表示的是神秘花园之外的门槛上的居住者，即那些吃了禁果而被逐出者所面对的存在。"
       },
       {
             "id": 16,
@@ -806,10 +813,8 @@
             "en": "The Tower",
             "cn": "高塔",
             "file": "RWS_Tarot_16_Tower.jpg",
-            "waiteDescEn": "Occult explanations attached to this card are meagre and mostly disconcerting. It is idle to indicate that it depicts min in all its aspects, because it bears this evidence on the surface. It is said further that it contains the first allusion to a material building, but I do not conceive that the Tower is more or less material than the pillars which we have met with in three previous cases. I see nothing to warrant Papus in supposing that it is literally the fall of Adam, but there is more in favour of his alternative--that it signifies the materialization of the spiritual word. The bibliographer Christian imagines that it is the downfall of the mind, seeking to penetrate the mystery of God. I agree rather with Grand Orient that it is the ruin of the House of We, when evil has prevailed therein, and above all that it is the rending of a House of Doctrine. I understand that the reference is, however, to a House of Falsehood. It illustrates also in the most comprehensive way the old truth that",
-            "waiteDescCn": "Waite 认为关于此牌的神秘解释贫乏且令人困惑；牌面显然呈现废墟与毁坏。他认为它比前三处出现的柱子并不更“物质”，更可理解为精神之言的物质化及其崩裂。",
-            "waiteMeaningEn": "Misery, distress, indigence, adversity, calamity, disgrace, deception, ruin. It is a card in particular of unforeseen catastrophe. Reversed : According to one account, the same in a lesser degree also oppression, imprisonment, tyranny.",
-            "waiteMeaningCn": "悲惨、困苦、贫乏、逆境、灾难、耻辱、欺骗、毁灭。尤其是一张预示突发灾变的牌。逆位：一种说法认为程度较轻；也指压迫、囚禁、暴政。"
+            "waiteDescEn": "Occult explanations attached to this card are meagre and mostly disconcerting. It is idle to indicate that it depicts min in all its aspects, because it bears this evidence on the surface. It is said further that it contains the first allusion to a material building, but I do not conceive that the Tower is more or less material than the pillars which we have met with in three previous cases. I see nothing to warrant Papus in supposing that it is literally the fall of Adam, but there is more in favour of his alternative--that it signifies the materialization of the spiritual word. The bibliographer Christian imagines that it is the downfall of the mind, seeking to penetrate the mystery of God. I agree rather with Grand Orient that it is the ruin of the House of We, when evil has prevailed therein, and above all that it is the rending of a House of Doctrine. I understand that the reference is, however, to a House of Falsehood. It illustrates also in the most comprehensive way the old truth that \"except the Lord build the house, they labour in vain that build it.\" There is a sense in which the catastrophe is a reflection from the previous card, but not on the side of the symbolism which I have tried to indicate therein. It is more correctly a question of analogy; one is concerned with the fall into the material and animal state, while the other signifies destruction on the intellectual side. The Tower has been spoken of as the chastisement of pride and the intellect overwhelmed in the attempt to penetrate the Mystery of God; but in neither case do these explanations account for the two persons who are the living sufferers. The one is the literal word made void and the other its false interpretation. In yet a deeper sense, it may signify also the end of a dispensation, but there is no possibility here for the consideration of this involved question.",
+            "waiteDescCn": "附属于此牌的隐秘解释很贫乏，而且大多令人困惑。指出它描绘了毁坏的各个方面是无用的，因为这一点在表面上已经显明。还据说它包含对物质建筑的第一次暗示，但我并不认为这座塔比我们在前三种情形中见到的柱子更物质或更不物质。我看不出有什么理由支持 Papus 认为它字面上就是亚当的堕落；但他的另一个说法更有道理，即它象征精神之言的物质化。书目学家 Christian 想象它是心智的崩落，因为心智试图穿透上帝的奥秘。我更同意 Grand Orient 的看法：当恶在其中占上风时，它是“我之屋”的毁坏，尤其是一座教义之屋的撕裂。不过我理解，这里所指的是一座虚假之屋。它还以最全面的方式说明那条古老真理：“若不是主建造房屋，建造的人就枉然劳力。”在某种意义上，这场灾难是前一张牌的反映，但不是我在那里试图指出的象征层面。更准确地说，这是一个类比问题；一张牌关乎坠入物质和动物状态，另一张则象征理智层面的毁灭。高塔曾被说成是对骄傲的惩罚，也被说成是理智试图穿透上帝奥秘时被压倒；但这两种解释都不能说明那两个承受痛苦的活人。其中一个是被废除的字面之言，另一个是它的错误解释。在更深的意义上，它也可能表示一个天命时代的终结，但这里无法考虑这个复杂问题。"
       },
       {
             "id": 17,
@@ -818,10 +823,8 @@
             "en": "The Star",
             "cn": "星星",
             "file": "RWS_Tarot_17_Star.jpg",
-            "waiteDescEn": "A great, radiant star of eight rays, surrounded by seven lesser stars--also of eight rays. The female figure in the foreground is entirely naked. Her left knee is on the land and her right foot upon the water. She pours Water of Life from two great ewers, irrigating sea and land. Behind her is rising ground and on the right a shrub or tree, whereon a bird alights. The figure expresses eternal youth and beauty. The star is l'étoile flamboyante , which appears in Masonic symbolism, but has been confused therein. That which the figure communicates to the living scene is the substance of the heavens and the elements. It has been said truly that the mottoes of this card are \"Waters of Life freely\" and \"Gifts of the Spirit.\"",
-            "waiteDescCn": "一颗八芒大星放射光芒，周围有七颗较小的八芒星。前景裸女一膝在地、一足在水，从两只大壶中倾倒生命之水，灌溉海与陆；她表现永恒的青春与美。",
-            "waiteMeaningEn": "Loss, theft, privation, abandonment; another reading says-hope and bright prospects, Reversed : Arrogance, haughtiness, impotence.",
-            "waiteMeaningCn": "损失、盗窃、匮乏、遗弃；另一种读法为希望与光明前景。逆位：傲慢、高傲、无力。"
+            "waiteDescEn": "A great, radiant star of eight rays, surrounded by seven lesser stars--also of eight rays. The female figure in the foreground is entirely naked. Her left knee is on the land and her right foot upon the water. She pours Water of Life from two great ewers, irrigating sea and land. Behind her is rising ground and on the right a shrub or tree, whereon a bird alights. The figure expresses eternal youth and beauty. The star is l'étoile flamboyante, which appears in Masonic symbolism, but has been confused therein. That which the figure communicates to the living scene is the substance of the heavens and the elements. It has been said truly that the mottoes of this card are \"Waters of Life freely\" and \"Gifts of the Spirit.\" The summary of several tawdry explanations says that it is a card of hope. On other planes it has been certified as immortality and interior light. For the majority of prepared minds, the figure will appear as the type of Truth unveiled, glorious in undying beauty, pouring on the waters of the soul some part and measure of her priceless possession. But she is in reality the Great Mother in the Kabalistic Sephira Binah, which is supernal Understanding, who communicates to the Sephiroth that are below in the measure that they can receive her influx.",
+            "waiteDescCn": "一颗巨大的八芒星光辉灿烂，周围环绕着七颗较小的星，它们也都是八芒。前景中的女性形象完全赤裸。她的左膝在陆地上，右足在水中。她从两只大水罐中倾倒生命之水，灌溉海与陆。她身后有升起的地面，右边有一丛灌木或树，树上停着一只鸟。这个形象表现永恒的青春与美。那颗星是“燃烧之星”，它出现在共济会象征中，但在那里被混淆了。这个形象传达给有生命场景的是诸天与元素的实质。有人正确地说，此牌的箴言是“生命之水白白赐予”和“圣灵的恩赐”。若能看出她实际上是谁，人们会发现她正位于物质化世界的一切观念之外，超越其自然或已制造之物的任何实体，也超越其所有显明形态。她被一些拙劣者称为希望之星；而在那个标志中，她呈现为可能获得者时，也确实属于较高世界的希望。可是，这只是个人发展进程中其中一项的显现，而她则是伟大的母亲，在卡巴拉的 Sephira Binah 中，在超上理解中，向下方的 Sephiroth 传达，按照它们所能接受的程度给予流溢。"
       },
       {
             "id": 18,
@@ -830,10 +833,8 @@
             "en": "The Moon",
             "cn": "月亮",
             "file": "RWS_Tarot_18_Moon.jpg",
-            "waiteDescEn": "The distinction between this card and some of the conventional types is that the moon is increasing on what is called the side of mercy, to the right of the observer. It has sixteen chief and sixteen secondary rays. The card represents life of the imagination apart from life of the spirit. The path between the towers is the issue into the unknown. The dog and wolf are the fears of the natural mind in the presence of that place of exit, when there is only reflected light to guide it.",
-            "waiteDescCn": "这张牌的月亮在观察者右侧的慈悲一边增长，有十六道主光与十六道次光。它表现脱离精神生命的想象生命；双塔间道路通向未知，狗与狼是自然心智在出口前的恐惧。",
-            "waiteMeaningEn": "Hidden enemies, danger, calumny, darkness, terror, deception, occult forces, error. Reversed : Instability, inconstancy, silence, lesser degrees of deception and error.",
-            "waiteMeaningCn": "隐藏的敌人、危险、诽谤、黑暗、恐怖、欺骗、神秘力量、错误。逆位：不稳定、反复、沉默，以及较轻程度的欺骗与错误。"
+            "waiteDescEn": "The distinction between this card and some of the conventional types is that the moon is increasing on what is called the side of mercy, to the right of the observer. It has sixteen chief and sixteen secondary rays. The card represents life of the imagination apart from life of the spirit. The path between the towers is the issue into the unknown. The dog and wolf are the fears of the natural mind in the presence of that place of exit, when there is only reflected light to guide it. The last reference is a key to another form of symbolism. The intellectual light is a reflection and beyond it is the unknown mystery which it cannot shew forth. It illuminates our animal nature, types of which are represented below--the dog, the wolf and that which comes up out of the deeps, the nameless and hideous tendency which is lower than the savage beast. It strives to attain manifestation, symbolized by crawling from the abyss of water to the land, but as a rule it sinks back whence it came. The face of the mind directs a calm gaze upon the unrest below; the dew of thought falls; the message is: Peace, be still; and it may be that there shall come a calm upon the animal nature, while the abyss beneath shall cease from giving up a form.",
+            "waiteDescCn": "此牌与某些传统类型的区别在于，月亮正在所谓慈悲的一侧增长，也就是观察者的右边。它有十六道主光和十六道次光。此牌代表脱离精神生命的想象生命。两塔之间的道路是通向未知的出口。狗与狼是自然心智在这个出口面前的恐惧，因为此时只有反射之光指引它。最后的提示是，从深处爬出的东西是无名而可憎的倾向，它低于野兽。它努力达到显现，并以其象征所代表的状态为标志而进入表达层面。若其与图像之面所象征的东西之间存在理智的和平，深渊也就不再产生形体。在通向教义之路上的最后一参照点可以在一些卡巴拉要点中找到，它们已由 Éliphas Lévi 作了提示，而这些要点属于第四十二章所说的 Shekinah。这张牌还应当理解为说：只有当反射之光服务于它所无法看见的东西时，理性之光才只是反射光。它照亮我们的动物本性，这些本性在其自身类别上由下方显现出来；要传达的信息是，理性的安静将会降临于动物本性，而下方的深渊也将停止吐出形体。"
       },
       {
             "id": 19,
@@ -842,10 +843,8 @@
             "en": "The Sun",
             "cn": "太阳",
             "file": "RWS_Tarot_19_Sun.jpg",
-            "waiteDescEn": "The naked child mounted on a white horse and displaying a red standard has been mentioned already as the better symbolism connected with this card. It is the destiny of the Supernatural East and the great and holy light which goes before the endless procession of humanity, coming out from the walled garden of the sensitive life and passing on the journey home. The card signifies, therefore, the transit from the manifest light of this world, represented by the glorious sun of earth, to the light of the world to come, which goes before aspiration and is typified by the heart of a child.",
-            "waiteDescCn": "裸童骑白马、展示红旗，是这张牌更好的象征。它是超自然东方的命运，是伟大而神圣的光，引导人类从感性生活的围墙花园中走出，踏上归途。",
-            "waiteMeaningEn": "Material happiness, fortunate marriage, contentment. Reversed : The same in a lesser sense.",
-            "waiteMeaningCn": "物质幸福、幸运婚姻、满足。逆位：同样含义但程度较弱。"
+            "waiteDescEn": "The naked child mounted on a white horse and displaying a red standard has been mentioned already as the better symbolism connected with this card. It is the destiny of the Supernatural East and the great and holy light which goes before the endless procession of humanity, coming out from the walled garden of the sensitive life and passing on the journey home. The card signifies, therefore, the transit from the manifest light of this world, represented by the glorious sun of earth, to the light of the world to come, which goes before aspiration and is typified by the heart of a child. But the last allusion is again the key to a different form or aspect of the symbolism. The sun is that of consciousness in the spirit - the direct as the antithesis of the reflected light. The characteristic type of humanity has become a little child therein--a child in the sense of simplicity and innocence in the sense of wisdom. In that simplicity, he bears the seal of Nature and of Art; in that innocence, he signifies the restored world. When the self-knowing spirit has dawned in the consciousness above the natural mind, that mind in its renewal leads forth the animal nature in a state of perfect conformity.",
+            "waiteDescCn": "赤裸的孩子骑在白马上，展开一面红旗，被理解为象征较高意义上的自然所注定的命运。他不是已经抵达知性之光中的孩子，而是从那光中出来、走向显明生命的孩子。这张牌代表从东方之外射出的光，与前一张牌中的反射光不同，是直接的、开放的光。因此，它在特征上象征人类意识中作为心智的那一部分所注定的命运。它是转入显明状态的光辉；这类光由此牌呈现为第三个阶段，其前两个阶段是魔术师和力量。自然心智的天真在此与精神旅程中的开悟之天真相对照，当这种天真在世界中带着完全的单纯特征行出时，也正暗示着与之相伴的欢喜。太阳是在意识中发光的意识；它也许会被视为闪耀之光的秘密，正是在这光中一切事物的本性得到理解。外层墙后面是大花园，表示在较低意义上的安全，却也表示被保护的生命。孩子在其巨大的单纯中是从这里出来的。对于他而言，神秘花园是从中产生他的生命的沃土，而在另外更高的意义上，它也被称作伊甸的四河流出的地方。此牌表明，当自然心智承载了上方之光的照耀时，这个心智在其更新中会引领动物本性进入完全顺应的状态。"
       },
       {
             "id": 20,
@@ -854,10 +853,8 @@
             "en": "Judgement",
             "cn": "审判",
             "file": "RWS_Tarot_20_Judgement.jpg",
-            "waiteDescEn": "I have said that this symbol is essentially invariable in all Tarot sets, or at least the variations do not alter its character. The great angel is here encompassed by clouds, but he blows his bannered trumpet, and the cross as usual is displayed on the banner. The dead are rising from their tombs--a woman on the right, a man on the left hand, and between them their child, whose back is turned.",
-            "waiteDescCn": "巨大的天使被云环绕，吹响带旗帜的号角，旗上如常显示十字。死者从墓中升起——右边女子、左边男子，中间有背对的孩子；众人以惊奇、崇敬与狂喜回应来自至高者的召唤。",
-            "waiteMeaningEn": "Change of position, renewal, outcome. Another account specifies total loss though lawsuit. Reversed : Weakness, pusillanimity, simplicity; also deliberation, decision, sentence.",
-            "waiteMeaningCn": "位置改变、更新、结果。另一说特别指出诉讼中的完全损失。逆位：软弱、怯懦、单纯；也指审议、决定、判决。"
+            "waiteDescEn": "I have said that this symbol is essentially invariable in all Tarot sets, or at least the variations do not alter its character. The great angel is here encompassed by clouds, but he blows his bannered trumpet, and the cross as usual is displayed on the banner. The dead are rising from their tombs--a woman on the right, a man on the left hand, and between them their child, whose back is turned. But in this card there are more than three who are restored, and it has been thought worth while to make this variation as illustrating the insufficiency of current explanations. It should be noted that all the figures are as one in the wonder, adoration and ecstacy expressed by their attitudes. It is the card which registers the accomplishment of the great work of transformation in answer to the summons of the Supernal--which summons is heard and answered from within. Herein is the intimation of a significance which cannot well be carried further in the present place. What is that within us which does sound a trumpet and all that is lower in our nature rises in response--almost in a moment, almost in the twinkling of an eye? Let the card continue to depict, for those who can see no further, the Last judgment and the resurrection in the natural body; but let those who have inward eyes look and discover therewith. They will understand that it has been called truly in the past a card of eternal life, and for this reason it may be compared with that which passes under the name of Temperance.",
+            "waiteDescCn": "我已经说过，这个象征本质上不变，或者说至少变化并不损害其性质。在这张牌中，伟大的天使被云彩环绕，吹响饰有十字的号角。死者从坟墓中升起；右边有一个女人，左边有一个男人，他们中间是他们的孩子，孩子背向我们。但在这张牌上还有超过三个人物；这是合宜的，因为变化明显表明这是全体人类的复活。值得注意的是，所有人物仿佛都被他们所听见的召唤惊奇着、敬拜着、狂喜着。这张牌是对完成大转化的回应，前一张牌已经传达了这种转化。它暗示已被精神净化并进入随之而来的成就状态的自然生命的意义，但这种成就状态并没有最终结局。它记录的不是灵魂在肉身死亡后的通行，而可以视为意味着通向较高状态的经过，在此状态中，较低层面上持续存在的事物得以继续。这样的说法几乎在理性明白自身无法解释的范围之内；并且它仅能以意识从其中升起的、无法被言说的界限来表明。在那个界限之内，普通生命的失明程度无法估量。它可以被称为诞生的牌，表示一种转生在更高生命中的诞生；因此也可以把它与名为节制的牌相比较。"
       },
       {
             "id": 21,
@@ -866,10 +863,8 @@
             "en": "The World",
             "cn": "世界",
             "file": "RWS_Tarot_21_World.jpg",
-            "waiteDescEn": "As this final message of the Major Trumps is unchanged--and indeed unchangeable--in respect of its design, it has been partly described already regarding its deeper sense. It represents also the perfection and end of the Cosmos, the secret which is within it, the rapture of the universe when it understands itself in God. It is further the state of the soul in the consciousness of Divine Vision, reflected from the self-knowing spirit. But these meanings are without prejudice to that which I have said concerning it on the material side.",
-            "waiteDescCn": "作为大阿尔卡纳的最后讯息，它代表宇宙的圆满与终点、其中的秘密，以及宇宙在神中理解自身时的狂喜；也是灵魂在神圣视觉意识中的状态。",
-            "waiteMeaningEn": "Assured success, recompense, voyage, route, emigration, flight, change of place. Reversed : Inertia, fixity, stagnation, permanence.",
-            "waiteMeaningCn": "确定的成功、报偿、旅行、路线、移居、逃离、地点改变。逆位：惰性、固定、停滞、恒常。"
+            "waiteDescEn": "As this final message of the Major Trumps is unchanged--and indeed unchangeable--in respect of its design, it has been partly described already regarding its deeper sense. It represents also the perfection and end of the Cosmos, the secret which is within it, the rapture of the universe when it understands itself in God. It is further the state of the soul in the consciousness of Divine Vision, reflected from the self-knowing spirit. But these meanings are without prejudice to that which I have said concerning it on the material side. It has more than one message on the macrocosmic side and is, for example, the state of the restored world when the law of manifestation shall have been carried to the highest degree of natural perfection. But it is perhaps more especially a story of the past, referring to that day when all was declared to be good, when the morning stars sang together and all the Sons of God shouted for joy. One of the worst explanations concerning it is that the figure symbolizes the Magus when he has reached the highest degree of initiation; another account says that it represents the absolute, which is ridiculous. The figure has been said to stand for Truth, which is, however, more properly allocated to the seventeenth card. Lastly, it has been called the Crown of the Magi.",
+            "waiteDescCn": "大阿尔卡纳的最后信息保持不变，而且它确实没有改变，这张牌比其他许多牌更加难以说明，因为它属于较高奥秘的完成状态。裸体女性在椭圆花环中舞蹈，四角有四活物；这是一个深奥的象征，表示在神圣异象中所看见的宇宙，也表示万物在神圣意识中的完成。它还表示灵魂在神中的狂喜，表示当灵魂认识到自身起源与目的地时所达到的神圣联结。这个形象是麦克罗普索波斯和小宇宙之间的门，也就是宏观世界与人之间的门。它已被错误地称为魔术师的反面，因为其中包含另一种形态的魔术师所拥有的四个元素。实际上，在这个象征中，一切都归于统一，并由更高的法则维系。对于一些人来说，这是一张宇宙意识之牌；对于另一些人来说，它是物质宇宙的完满，它可以这样被理解，而不损害我关于它在物质层面所说的话。在占星学中，它常被认为属于土星，但这并没有在此说明。在更深意义上，牌中的人物是流动而被固定的生命，是运动中的不动，是所见世界之后的隐秘中心。它也曾被称为奖赏之牌、完成之牌、终结之牌、宇宙之牌，以及通向另一状态之门；其中一些说法可以成立，但有些更适合第十七牌。最后，它也曾被称为贤者之冠。"
       }
 ];
 
@@ -972,24 +967,38 @@
         .replace(/'/g, "&#39;");
     }
 
+
+    function splitEnglishSentences(text) {
+      return text
+        .replace(/\s+/g, " ")
+        .match(/[^.!?]+(?:[.!?]+|$)(?:\s*"|\s*”)?/g)
+        ?.map((s) => s.trim())
+        .filter(Boolean) || [text];
+    }
+
+    function splitChineseSentences(text) {
+      return text
+        .replace(/\s+/g, " ")
+        .match(/[^。！？]+[。！？]?/g)
+        ?.map((s) => s.trim())
+        .filter(Boolean) || [text];
+    }
+
     function renderWaiteReading(card) {
       readingPanel.classList.remove("empty");
+      const enSentences = splitEnglishSentences(card.waiteDescEn);
+      const zhSentences = splitChineseSentences(card.waiteDescCn);
+      const maxLen = Math.max(enSentences.length, zhSentences.length);
+      const pairs = Array.from({ length: maxLen }, (_, i) => `
+        <article class="waite-pair">
+          <p class="en">${escapeHTML(enSentences[i] || "")}</p>
+          <p class="zh">${escapeHTML(zhSentences[i] || "")}</p>
+        </article>
+      `).join("");
       readingPanel.innerHTML = `
-        <h2>Waite 原文与中文翻译</h2>
-        <div class="reading-block">
-          <h3>Image symbolism · 图像象征</h3>
-          <div class="lang-label">EN · Original</div>
-          <div class="reading-text">${escapeHTML(card.waiteDescEn)}</div>
-          <div class="lang-label" style="margin-top: 10px;">中文翻译</div>
-          <div class="reading-text cn">${escapeHTML(card.waiteDescCn)}</div>
-        </div>
-        <div class="reading-block">
-          <h3>Divinatory meanings · 占卜含义</h3>
-          <div class="lang-label">EN · Original</div>
-          <div class="reading-text">${escapeHTML(card.waiteMeaningEn)}</div>
-          <div class="lang-label" style="margin-top: 10px;">中文翻译</div>
-          <div class="reading-text cn">${escapeHTML(card.waiteMeaningCn)}</div>
-        </div>
+        <h2>Waite 原文与逐句中文翻译</h2>
+        <div class="detail-note">A. E. Waite 原文完整保留；下方按句提供中文翻译。占卜含义已按要求移除。</div>
+        <div class="waite-reading">${pairs}</div>
       `;
     }
 
@@ -1003,10 +1012,8 @@
           <div class="card-title-main">${card.cn}</div>
           <div class="card-title-sub">${card.number} · ${card.en}</div>
         </div>
-        <div class="card-meta">大阿尔卡纳 · 编号 ${card.id} · Waite 原文双语说明</div>
-        <div class="card-desc">${escapeHTML(card.waiteDescCn)}</div>
-        <div class="card-meaning">💬 ${escapeHTML(card.waiteMeaningCn)}</div>
-        <div class="card-source">来源：A. E. Waite，《The Pictorial Key to the Tarot》epub；英文原文保留，中文为翻译。</div>
+        <div class="card-meta">大阿尔卡纳 · 编号 ${card.id} · Rider–Waite 牌面</div>
+        <div class="card-source">完整原文与逐句中文翻译见中间栏。</div>
       `;
 
       renderWaiteReading(card);
