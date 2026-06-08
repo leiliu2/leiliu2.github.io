@@ -548,6 +548,74 @@
       margin-bottom: 10px;
     }
 
+
+    .card-advice {
+      font-size: 13px;
+      line-height: 1.65;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: linear-gradient(
+        to right,
+        rgba(234, 179, 8, 0.16),
+        rgba(15, 23, 42, 0.86)
+      );
+      border: 1px solid rgba(234, 179, 8, 0.45);
+      margin: 10px 0 8px;
+    }
+
+    .card-advice-source {
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .card-advice-source a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .card-advice-source a:hover {
+      text-decoration: underline;
+    }
+
+    .waite-reading {
+      gap: 14px;
+    }
+
+    .waite-language-block {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(148, 163, 184, 0.24);
+    }
+
+    .waite-language-block h3 {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .waite-language-block .zh,
+    .waite-language-block .en {
+      white-space: pre-line;
+    }
+
+    .waite-language-block .zh {
+      font-size: 14px;
+      line-height: 1.85;
+      color: #dbeafe;
+    }
+
+    .waite-language-block .en {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      line-height: 1.75;
+      color: #f8fafc;
+    }
+
   </style>
 </head>
 <body>
@@ -608,7 +676,7 @@
     <!-- 中间：Waite 原文与中文翻译 -->
     <section class="reading-panel empty" id="reading-panel">
       <div>
-        抽牌后会在这里显示 A. E. Waite 原文与逐句中文翻译。<br />
+        抽牌后会在这里显示 A. E. Waite 原文与中文翻译。<br />
         为适应长文本，此区域可独立滚动。
       </div>
     </section>
@@ -637,7 +705,7 @@
     </aside>
 
     <footer class="footer">
-      <div>说明文字基于 A. E. Waite《The Pictorial Key to the Tarot》epub；中栏保留大阿尔卡纳原文并逐句翻译。</div>
+      <div>说明文字基于 A. E. Waite《The Pictorial Key to the Tarot》epub；中栏保留大阿尔卡纳中文与英文整段内容。</div>
       <div>提示：本页面仅供个人娱乐与自我反思，不具备任何预测保证。</div>
     </footer>
   </div>
@@ -870,6 +938,31 @@
 
     const imageBasePath = "images/"; // 你的图片目录
 
+    const TAROT_HINTS = {
+      0: { text: "带着初心出发，但记得为未知留一点谨慎。", title: "愚者", url: "https://zh.wikipedia.org/wiki/%E6%84%9A%E8%80%85" },
+      1: { text: "把已有资源集中起来，主动开启你想做的事。", title: "魔术师 (塔罗牌)", url: "https://zh.wikipedia.org/wiki/%E9%AD%94%E6%9C%AF%E5%B8%88_(%E5%A1%94%E7%BD%97%E7%89%8C)" },
+      2: { text: "先安静聆听直觉，答案未必需要立刻说出。", title: "女祭司 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E5%A5%B3%E7%A5%AD%E5%8F%B8_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      3: { text: "用滋养与创造力照顾当下，让事物自然生长。", title: "皇后 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E7%9A%87%E5%90%8E_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      4: { text: "建立清晰边界和秩序，稳住你能掌控的部分。", title: "皇帝 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E7%9A%87%E5%B8%9D_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      5: { text: "回到可信的价值与规则中，寻找成熟的指引。", title: "教皇 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E6%95%99%E7%9A%87_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      6: { text: "面对选择时倾听真心，也承担关系中的责任。", title: "戀人 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E6%88%80%E4%BA%BA_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      7: { text: "保持方向和意志，把分散的力量拉向同一个目标。", title: "战车 (塔罗牌)", url: "https://zh.wikipedia.org/wiki/%E6%88%98%E8%BD%A6_(%E5%A1%94%E7%BD%97%E7%89%8C)" },
+      8: { text: "用温柔和耐心驯服冲动，真正的力量在内心。", title: "力量 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E5%8A%9B%E9%87%8F_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      9: { text: "暂时退后一步，在独处中看清自己的答案。", title: "隱者 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E9%9A%B1%E8%80%85_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      10: { text: "接受变化的转动，顺势调整比强行控制更有力。", title: "命運之輪", url: "https://zh.wikipedia.org/wiki/%E5%91%BD%E9%81%8B%E4%B9%8B%E8%BC%AA" },
+      11: { text: "让事实、责任与公平成为你此刻的判断标准。", title: "正義 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E6%AD%A3%E7%BE%A9_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      12: { text: "暂停行动，换一个角度看见新的可能。", title: "倒吊人", url: "https://zh.wikipedia.org/wiki/%E5%80%92%E5%90%8A%E4%BA%BA" },
+      13: { text: "允许旧阶段结束，新的生命力会从转化中出现。", title: "死神 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E6%AD%BB%E7%A5%9E_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      14: { text: "在两端之间找到平衡，用调和让事情继续流动。", title: "節制 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E7%AF%80%E5%88%B6_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      15: { text: "看清束缚你的欲望或习惯，选择重新夺回自由。", title: "惡魔 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E6%83%A1%E9%AD%94_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      16: { text: "当旧结构崩塌时，诚实面对现实并重新建立根基。", title: "塔 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E5%A1%94_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      17: { text: "保持希望和信任，让疗愈在安静中慢慢发生。", title: "星星 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E6%98%9F%E6%98%9F_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      18: { text: "穿过不安与幻象，给直觉和事实同样的位置。", title: "月亮 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E6%9C%88%E4%BA%AE_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      19: { text: "坦然展现自己，接受喜悦、清晰与生命力。", title: "太陽 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E5%A4%AA%E9%99%BD_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      20: { text: "回应内在的召唤，把过去转化为新的觉醒。", title: "審判 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E5%AF%A9%E5%88%A4_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+      21: { text: "承认一个阶段的完成，带着整合后的自己继续前行。", title: "世界 (塔羅牌)", url: "https://zh.wikipedia.org/wiki/%E4%B8%96%E7%95%8C_(%E5%A1%94%E7%BE%85%E7%89%8C)" },
+    };
+
     const oneBtn = document.getElementById("btn-one");
     const threeBtn = document.getElementById("btn-three");
     const clearBtn = document.getElementById("btn-clear-history");
@@ -986,19 +1079,19 @@
 
     function renderWaiteReading(card) {
       readingPanel.classList.remove("empty");
-      const enSentences = splitEnglishSentences(card.waiteDescEn);
-      const zhSentences = splitChineseSentences(card.waiteDescCn);
-      const maxLen = Math.max(enSentences.length, zhSentences.length);
-      const pairs = Array.from({ length: maxLen }, (_, i) => `
-        <article class="waite-pair">
-          <p class="en">${escapeHTML(enSentences[i] || "")}</p>
-          <p class="zh">${escapeHTML(zhSentences[i] || "")}</p>
-        </article>
-      `).join("");
       readingPanel.innerHTML = `
-        <h2>Waite 原文与逐句中文翻译</h2>
-        <div class="detail-note">A. E. Waite 原文完整保留；下方按句提供中文翻译。占卜含义已按要求移除。</div>
-        <div class="waite-reading">${pairs}</div>
+        <h2>Waite 原文与中文翻译</h2>
+        <div class="detail-note">A. E. Waite 原文与中文翻译完整保留；下方仅按语言分段显示。占卜含义已按要求移除。</div>
+        <div class="waite-reading">
+          <article class="waite-language-block">
+            <h3>中文翻译</h3>
+            <p class="zh">${escapeHTML(card.waiteDescCn)}</p>
+          </article>
+          <article class="waite-language-block">
+            <h3>English Original</h3>
+            <p class="en">${escapeHTML(card.waiteDescEn)}</p>
+          </article>
+        </div>
       `;
     }
 
@@ -1007,13 +1100,20 @@
         <img src="${imageBasePath + card.file}" alt="${card.en}" loading="lazy" />
       `;
 
+      const hint = TAROT_HINTS[card.id];
+      const adviceHTML = hint
+        ? `<div class="card-advice">💬 ${escapeHTML(hint.text)}</div>
+           <div class="card-advice-source">参考：<a href="${escapeHTML(hint.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(hint.title)}</a> · Wikipedia</div>`
+        : "";
+
       cardInfo.innerHTML = `
         <div class="card-title">
           <div class="card-title-main">${card.cn}</div>
           <div class="card-title-sub">${card.number} · ${card.en}</div>
         </div>
         <div class="card-meta">大阿尔卡纳 · 编号 ${card.id} · Rider–Waite 牌面</div>
-        <div class="card-source">完整原文与逐句中文翻译见中间栏。</div>
+        ${adviceHTML}
+        <div class="card-source">完整原文与中文翻译见中间栏。</div>
       `;
 
       renderWaiteReading(card);
